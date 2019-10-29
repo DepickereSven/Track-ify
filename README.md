@@ -1,5 +1,5 @@
 # spotify-analytics
- 
+
 ## Project setup
 ```
 npm install
@@ -18,11 +18,6 @@ npm run build
 ### Run your unit tests
 ```
 npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration

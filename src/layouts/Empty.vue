@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <slot></slot>
-  </div>
+    <v-app id="inspire">
+        <slot></slot>
+    </v-app>
 </template>

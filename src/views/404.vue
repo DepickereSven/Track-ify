@@ -3,9 +3,7 @@
 </template>
 
 <script>
-    export default {
-        name: "test"
-    }
+    export default {}
 </script>
 
 <style scoped>

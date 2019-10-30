@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <component :is="layout">
-      <router-view></router-view>
-    </component>
-  </div>
+    <div>
+        <component :is="layout">
+            <router-view></router-view>
+        </component>
+    </div>
 </template>
 
 <script>
@@ -19,5 +19,5 @@
 </script>
 
 <style lang="css">
-  @import "app.css";
+    @import "app.css";
 </style>

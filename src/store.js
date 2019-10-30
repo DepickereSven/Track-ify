@@ -5,17 +5,17 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    login: null
-  },
-  // plugins: [createPersistedState({
-  //   paths: ["voted"]
-  // })],
-  mutations: {
-    updateLogin(state, newLogin) {
-      state.login = newLogin
-    }
-  },
-  actions: {},
-  modules: {}
+    state: {
+        login: null
+    },
+    // plugins: [createPersistedState({
+    //   paths: ["voted"]
+    // })],
+    mutations: {
+        updateLogin(state, newLogin) {
+            state.login = newLogin
+        }
+    },
+    actions: {},
+    modules: {}
 })

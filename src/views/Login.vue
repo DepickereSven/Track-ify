@@ -18,7 +18,7 @@
         data: () => ({}),
         methods: {
             login: function () {
-                handle.init(this);
+                handle.login();
             }
         }
     }

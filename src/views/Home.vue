@@ -1,22 +1,19 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center>
-            <v-list rounded>
+            <v-list rounded class="list">
                 <v-list-item-group v-model="item" color="primary">
                     <v-list-item v-for="(item, i) in data" :key="i">
                         <v-list-item-avatar tile>
                             <img :src="item.album.images[item.album.images.length -1].url" :alt="item.album.images[item.album.images.length -1].value"/>
                         </v-list-item-avatar>
-                        <v-row>
-                            <v-list-item-content>
-                                <v-list-item-title v-text="item.name"></v-list-item-title>
-                                <v-list-item-subtitle v-text="item.artists[0].name"></v-list-item-subtitle>
-                            </v-list-item-content>
-                            <v-list-item-content>
-                                <v-list-item-title v-text="item.name"></v-list-item-title>
-                                <v-list-item-subtitle v-text="item.artists[0].name"></v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-row>
+                        <v-list-item-content>
+                            <v-list-item-title v-text="item.name"></v-list-item-title>
+                            <v-list-item-subtitle v-text="item.artists[0].name"></v-list-item-subtitle>
+                        </v-list-item-content>
+                        <v-list-item-action @click="play(item)">
+                            <font-awesome-icon :icon="['fas', 'play']" size="lg" pull="right"></font-awesome-icon>
+                        </v-list-item-action>
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
@@ -29,11 +26,12 @@
     import handle from "../assets/js/Vue/home/handle"
 
     export default {
-        created: function (){
+        created: function () {
             // handle.init(this);
         },
         data: () => ({
             item: 1,
+            audio: null,
             data: [
                 {
                     "album": {
@@ -11714,10 +11712,23 @@
                     "uri": "spotify:track:1kdpsGmXm5wpsX9mHKttww"
                 }
             ]
-        })
+        }),
+        methods: {
+            play: function (arg){
+                if (this.audio !== null){
+                    this.audio.pause();
+                }
+                this.audio = new Audio(arg.preview_url);
+                this.audio.play();
+            }
+        }
     }
 </script>
 
 <style scoped>
+
+    #inspire .list{
+        max-width: 50%;
+    }
 
 </style>

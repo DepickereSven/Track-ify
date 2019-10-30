@@ -29,6 +29,14 @@ const router = new Router({
             }
         },
         {
+            path: '/confirm',
+            name: 'confirm',
+            component: () => import('./views/Confirm.vue'),
+            meta: {
+                layout: 'empty'
+            }
+        },
+        {
             path: '/404',
             name: '404',
             component: () => import('./views/404.vue'),

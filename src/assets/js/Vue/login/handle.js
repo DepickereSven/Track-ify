@@ -6,7 +6,7 @@ import spotify from "../../spotify"
 
 export default (function () {
 
-    const init = function (_self) {
+    const login = function () {
 
         const hash = spotify.getHash();
 
@@ -17,20 +17,13 @@ export default (function () {
         const redirectUri = spotify.configuration.redirectUri;
         const scopes = spotify.configuration.scopes;
 
-
-        console.log(_token, "before");
-
         if (!_token) {
             window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token`;
         }
-
-        console.log(_token, window.location);
     };
 
-
-
     return {
-        init
+        login
     }
 
 })();

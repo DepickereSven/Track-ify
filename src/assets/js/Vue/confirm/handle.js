@@ -17,6 +17,7 @@ export default (function () {
                     user: true
                 }
             );
+            spotify.setUpSpotifyAPI(_self);
             _self.$router.push({name: "home"})
         }
     };

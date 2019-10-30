@@ -2,6 +2,8 @@
  Created by svend on 30/10/2019.
  **/
 
+const SpotifyWebApi = require('spotify-web-api-js');
+
 export default (function () {
 
     const configuration = {
@@ -12,7 +14,8 @@ export default (function () {
             "user-top-read",
             // "user-read-email",
             // "user-read-private"
-        ]
+        ],
+        spotifyApi: null
     };
 
     //******  HELPER FUNCTION ******//
@@ -32,10 +35,16 @@ export default (function () {
         return hash;
     }
 
+    function setUpSpotifyAPI(_self) {
+        configuration.spotifyApi = new SpotifyWebApi();
+        configuration.spotifyApi.setAccessToken(_self.$store.state.login.token);
+    }
+
 
     return {
         configuration,
-        getHash
+        getHash,
+        setUpSpotifyAPI
     }
 
 })();

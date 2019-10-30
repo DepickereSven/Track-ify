@@ -11,3 +11,12 @@
         </v-content>
     </v-app>
 </template>
+
+
+<style scoped>
+
+    #inspire .v-toolbar {
+        flex: 0 0;
+    }
+
+</style>

@@ -7,6 +7,8 @@ import store from './store'
 import Default from './layouts/Default'
 import Empty from './layouts/Empty'
 
+import fontAwesome from "./plugins/fontAwesome"
+
 Vue.component('default-layout', Default);
 Vue.component('empty-layout', Empty);
 

@@ -1,6 +1,14 @@
 <template>
     <v-container fluid fill-height>
-        <v-layout align-center justify-center>
+        <v-layout align-center justify-center column>
+            <v-expansion-panels class="list">
+                <v-expansion-panel>
+                    <v-expansion-panel-header>Top 10 Genres</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+            </v-expansion-panels>
             <v-list rounded class="list">
                 <v-list-item-group v-model="item" color="primary">
                     <v-list-item v-for="(item, i) in data" :key="i">
@@ -28,6 +36,7 @@
 
     import handle from "../assets/js/Vue/home/handle"
     import ArtistsList from "../components/ArtistsList"
+    import Genres from "../components/Genres"
 
 
     export default {
@@ -35,14 +44,24 @@
             handle.init(this);
         },
         components: {
-            ArtistsList
+            ArtistsList,
+            Genres
         },
         data: () => ({
             item: 1,
             audio: null,
             data: [],
             artists: [],
-            genres: []
+            genres: [],
+            loaded: false,
+            genresChart: {
+                labels: [],
+                datasets: [{
+                    backgroundColor: [],
+                    borderWidth: 0,
+                    data: []
+                }]
+            }
         }),
         methods: {
             play: function (arg){

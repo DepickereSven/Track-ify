@@ -14,10 +14,7 @@
 
     export default {
         name: "ArtistsList",
-        props: ["artists"],
-        created() {
-            console.log(this.$props.artists.length)
-        }
+        props: ["artists"]
     }
 
 

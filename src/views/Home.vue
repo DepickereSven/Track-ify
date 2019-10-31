@@ -40,7 +40,8 @@
         data: () => ({
             item: 1,
             audio: null,
-            data: []
+            data: [],
+            artists: []
         }),
         methods: {
             play: function (arg){

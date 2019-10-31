@@ -41,7 +41,8 @@
             item: 1,
             audio: null,
             data: [],
-            artists: []
+            artists: [],
+            genres: []
         }),
         methods: {
             play: function (arg){

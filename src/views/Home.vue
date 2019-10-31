@@ -9,7 +9,9 @@
                         </v-list-item-avatar>
                         <v-list-item-content>
                             <v-list-item-title v-text="item.name"></v-list-item-title>
-                            <v-list-item-subtitle v-text="item.artists[0].name"></v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                <ArtistsList class="artists" :artists="item.artists"></ArtistsList>
+                            </v-list-item-subtitle>
                         </v-list-item-content>
                         <v-list-item-action @click="play(item)">
                             <font-awesome-icon :icon="['fas', 'play']" size="lg" pull="right"></font-awesome-icon>
@@ -23,11 +25,17 @@
 
 <script>
 
+
     import handle from "../assets/js/Vue/home/handle"
+    import ArtistsList from "../components/ArtistsList"
+
 
     export default {
         created: function () {
             handle.init(this);
+        },
+        components: {
+            ArtistsList
         },
         data: () => ({
             item: 1,
@@ -43,6 +51,7 @@
                 this.audio.play();
             }
         }
+
     }
 </script>
 
@@ -50,6 +59,10 @@
 
     #inspire .list{
         max-width: 50%;
+    }
+
+    #inspire .artists{
+        display: flex;
     }
 
 </style>

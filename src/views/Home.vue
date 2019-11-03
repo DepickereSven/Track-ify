@@ -1,15 +1,17 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center column>
-            <v-expansion-panels class="list">
-                <v-expansion-panel>
-                    <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
-                    <v-expansion-panel-content v-show="chartDraw">
-                        <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
-                    </v-expansion-panel-content>
-                </v-expansion-panel>
-            </v-expansion-panels>
+
+
             <v-list rounded class="list">
+                <v-expansion-panels>
+                    <v-expansion-panel>
+                        <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
+                        <v-expansion-panel-content v-show="chartDraw">
+                            <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
+                        </v-expansion-panel-content>
+                    </v-expansion-panel>
+                </v-expansion-panels>
                 <v-list-item-group v-model="item" color="primary">
                     <v-list-item v-for="(item, i) in data" :key="i">
                         <v-list-item-avatar tile>

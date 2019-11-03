@@ -9,26 +9,25 @@ import artists from "../../../images/artists"
 export default (function () {
 
     const init = function (_self) {
-        // _self.data = songData.items;
-        // _self.artists = artists.artists;
-        // getAllGenres(_self);
+        _self.data = songData.items;
+        _self.artists = artists.artists;
+        getAllGenres(_self);
         _self.loaded = true;
-        spotify.configuration.spotifyApi.getMyTopTracks({
-            limit: 50,
-            time_range: "short_term"
-        }).then(function(data) {
-            _self.data = data.items;
-        }).then(function() {
-            return spotify.configuration.spotifyApi.getArtists(getIDsArtists(_self));
-        }).then(function(artistsInfo) {
-            _self.artists = artistsInfo.artists;
-            getAllGenres(_self);
-            _self.loaded = true;
-            console.log("ready");
-        }).catch(function(error) {
-            console.error(error);
-        });
-
+        // spotify.configuration.spotifyApi.getMyTopTracks({
+        //     limit: 50,
+        //     time_range: "short_term"
+        // }).then(function(data) {
+        //     _self.data = data.items;
+        // }).then(function() {
+        //     return spotify.configuration.spotifyApi.getArtists(getIDsArtists(_self));
+        // }).then(function(artistsInfo) {
+        //     _self.artists = artistsInfo.artists;
+        //     getAllGenres(_self);
+        //     _self.loaded = true;
+        //     console.log("ready");
+        // }).catch(function(error) {
+        //     console.error(error);
+        // });
     };
 
     const getIDsArtists = function (_self) {

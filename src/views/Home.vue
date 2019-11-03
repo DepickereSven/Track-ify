@@ -3,8 +3,8 @@
         <v-layout align-center justify-center column>
             <v-expansion-panels class="list">
                 <v-expansion-panel>
-                    <v-expansion-panel-header>Top 10 Genres</v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
+                    <v-expansion-panel-content v-show="chartDraw">
                         <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
                     </v-expansion-panel-content>
                 </v-expansion-panel>
@@ -54,6 +54,7 @@
             artists: [],
             genres: [],
             loaded: false,
+            chartDraw: false,
             genresChart: {
                 labels: [],
                 datasets: [{
@@ -70,6 +71,11 @@
                 }
                 this.audio = new Audio(arg.preview_url);
                 this.audio.play();
+            },
+            redrawChart: function () {
+                console.log(this.chartDraw, "before");
+                this.chartDraw = !this.chartDraw;
+                console.log(this.chartDraw, "after");
             }
         }
 

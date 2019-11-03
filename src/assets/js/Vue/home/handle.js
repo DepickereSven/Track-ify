@@ -84,11 +84,6 @@ export default (function () {
             _self.genresChart.datasets[0].data.push(_self.genres[index].hits);
             index++;
         }
-        // _self.genres.forEach((function (el) {
-        //     _self.genresChart.labels.push(el.name);
-        //     _self.genresChart.datasets[0].backgroundColor.push(getRandomColor());
-        //     _self.genresChart.datasets[0].data.push(el.hits);
-        // }))
     }
 
     function getRandomColor() {

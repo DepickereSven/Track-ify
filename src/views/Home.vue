@@ -1,8 +1,7 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center column>
-
-
+            
             <v-list rounded class="list">
                 <v-expansion-panels>
                     <v-expansion-panel>
@@ -29,6 +28,8 @@
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
+            <audio :src="currentSong.current" @timeupdate="currentSong.time = $event.target.currentTime" ref="audio" @ended="musicEnded" autoload preload="auto" autoplay></audio>
+            <MusicPlayer :current-song="currentSong" :time="currentSong.time" @stop="stopMusic"></MusicPlayer>
         </v-layout>
     </v-container>
 </template>
@@ -39,7 +40,7 @@
     import handle from "../assets/js/Vue/home/handle"
     import ArtistsList from "../components/ArtistsList"
     import Genres from "../components/Genres"
-
+    import MusicPlayer from "../components/MusicPlayer"
 
     export default {
         created: function () {
@@ -47,11 +48,11 @@
         },
         components: {
             ArtistsList,
-            Genres
+            Genres,
+            MusicPlayer
         },
         data: () => ({
             item: 1,
-            audio: null,
             data: [],
             artists: [],
             genres: [],
@@ -64,22 +65,52 @@
                     borderWidth: 0,
                     data: []
                 }]
-            }
+            },
+            currentSong: {
+                isPlaying: false,
+                title: null,
+                artists: [],
+                time: 0,
+                current: null
+            },
         }),
         methods: {
             play: function (arg){
-                if (this.audio !== null){
-                    this.audio.pause();
+                if (this.currentSong.isPlaying){
+                    this.stopMusic();
+                    this.startMusic(arg);
+                } else {
+                    this.startMusic(arg);
                 }
-                this.audio = new Audio(arg.preview_url);
-                this.audio.play();
+            },
+            musicEnded: function (){
+                this.currentSong.isPlaying = false;
+            },
+            startMusic: function (arg){
+                this.currentSong.isPlaying = true;
+                this.currentSong.current = arg.preview_url;
+                this.currentSong.title = arg.name;
+                this.currentSong.artists = arg.artists;
+            },
+            stopMusic: function (){
+                this.$refs.audio.pause();
+                this.currentSong.current = null;
+                this.musicEnded();
             },
             redrawChart: function () {
                 console.log(this.chartDraw, "before");
                 this.chartDraw = !this.chartDraw;
                 console.log(this.chartDraw, "after");
+            },
+
+        },
+        watch:{
+            time(time){
+                if (Math.abs(time - this.$refs.audio.currentTime) > 0.5) {
+                    this.$refs.audio.currentTime = time;
+                }
             }
-        }
+        },
 
     }
 </script>
@@ -90,8 +121,6 @@
         max-width: 50%;
     }
 
-    #inspire .artists{
-        display: flex;
-    }
+
 
 </style>

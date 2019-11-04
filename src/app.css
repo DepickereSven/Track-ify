@@ -1,3 +1,8 @@
+
 #inspire .artists{
     display: flex;
+}
+
+#inspire .mouse-pointer{
+    cursor: pointer;
 }

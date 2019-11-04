@@ -6,7 +6,7 @@
                     <v-expansion-panel>
                         <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
                         <v-expansion-panel-content v-if="chartDraw">
-                            <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
+                            <GenresChart :loaded="loaded" :chart-data="genresChart"></GenresChart>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 </v-expansion-panels>
@@ -38,7 +38,7 @@
 
     import handle from "../assets/js/Vue/home/handle"
     import ArtistsList from "../components/ArtistsList"
-    import Genres from "../components/Genres"
+    import GenresChart from "../components/GenresChart"
     import MusicPlayer from "../components/MusicPlayer"
 
     export default {
@@ -47,7 +47,7 @@
         },
         components: {
             ArtistsList,
-            Genres,
+            GenresChart,
             MusicPlayer
         },
         data: () => ({

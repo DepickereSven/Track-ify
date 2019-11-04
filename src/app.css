@@ -1,8 +1,19 @@
 
-#inspire .artists{
+#inspire #spanText{
     display: flex;
+    text-transform: capitalize;
+}
+
+#inspire .whitespace {
+    margin-right: 4px;
+}
+
+#inspire .s-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 #inspire .mouse-pointer{
     cursor: pointer;
-}
+}  

@@ -1,0 +1,239 @@
+{
+  "album_type" : "album",
+  "artists" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+    },
+    "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+    "id" : "7n2Ycct7Beij7Dj7meI4X0",
+    "name" : "TWICE",
+    "type" : "artist",
+    "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+  } ],
+  "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+  "copyrights" : [ {
+    "text" : "(C) 2019 JYP Entertainment",
+    "type" : "C"
+  } ],
+  "external_ids" : {
+    "upc" : "738676857375"
+  },
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/album/4EG4E0Uk0HpJBgOMgXI26z"
+  },
+  "genres" : [ ],
+  "href" : "https://api.spotify.com/v1/albums/4EG4E0Uk0HpJBgOMgXI26z",
+  "id" : "4EG4E0Uk0HpJBgOMgXI26z",
+  "images" : [ {
+    "height" : 640,
+    "url" : "https://i.scdn.co/image/2672add02cdf23f490a3911b837e733a48f66971",
+    "width" : 640
+  }, {
+    "height" : 300,
+    "url" : "https://i.scdn.co/image/04319f7e58f94b9085094175566103e9b933cabb",
+    "width" : 300
+  }, {
+    "height" : 64,
+    "url" : "https://i.scdn.co/image/f652bf82a916fb20313133b2efed86a5a06b7db9",
+    "width" : 64
+  } ],
+  "label" : "JYP Entertainment",
+  "name" : "Feel Special",
+  "popularity" : 78,
+  "release_date" : "2019-09-23",
+  "release_date_precision" : "day",
+  "total_tracks" : 7,
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/albums/4EG4E0Uk0HpJBgOMgXI26z/tracks?offset=0&limit=50",
+    "items" : [ {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 206868,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0u7aRGM7YmvtsmG5NSrNsO"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0u7aRGM7YmvtsmG5NSrNsO",
+      "id" : "0u7aRGM7YmvtsmG5NSrNsO",
+      "is_local" : false,
+      "name" : "Feel Special",
+      "preview_url" : "https://p.scdn.co/mp3-preview/66ae76749f6fc2280f91c19da497d86cd07277a1?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:0u7aRGM7YmvtsmG5NSrNsO"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 177086,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/14lnkKluT9U1lAz6M10SPx"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/14lnkKluT9U1lAz6M10SPx",
+      "id" : "14lnkKluT9U1lAz6M10SPx",
+      "is_local" : false,
+      "name" : "RAINBOW",
+      "preview_url" : "https://p.scdn.co/mp3-preview/b5a9e7bd03ad1b6f2c12598cdc38dd09677e43fa?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:14lnkKluT9U1lAz6M10SPx"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 186970,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/06rOypJlNqSmHXT3FymVp6"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/06rOypJlNqSmHXT3FymVp6",
+      "id" : "06rOypJlNqSmHXT3FymVp6",
+      "is_local" : false,
+      "name" : "GET LOUD",
+      "preview_url" : "https://p.scdn.co/mp3-preview/7846aa4e70a483fe6108ad9cf60e6eafe355fb96?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 3,
+      "type" : "track",
+      "uri" : "spotify:track:06rOypJlNqSmHXT3FymVp6"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 193995,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0lOndCh09maK7vpvRgyy6u"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0lOndCh09maK7vpvRgyy6u",
+      "id" : "0lOndCh09maK7vpvRgyy6u",
+      "is_local" : false,
+      "name" : "TRICK IT",
+      "preview_url" : "https://p.scdn.co/mp3-preview/7289fb4ed647f7788e8ea57d4e9c1a73c39e47ca?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 4,
+      "type" : "track",
+      "uri" : "spotify:track:0lOndCh09maK7vpvRgyy6u"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 191228,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5L002vJ4NC0lRM8RtncBBp"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5L002vJ4NC0lRM8RtncBBp",
+      "id" : "5L002vJ4NC0lRM8RtncBBp",
+      "is_local" : false,
+      "name" : "LOVE FOOLISH",
+      "preview_url" : "https://p.scdn.co/mp3-preview/e14094324069aa885c06d8399710888753f2ddd0?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:5L002vJ4NC0lRM8RtncBBp"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 228916,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5yprM8km16jU3eXi0M9HRD"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5yprM8km16jU3eXi0M9HRD",
+      "id" : "5yprM8km16jU3eXi0M9HRD",
+      "is_local" : false,
+      "name" : "21:29",
+      "preview_url" : "https://p.scdn.co/mp3-preview/d633c9b4cf6544384ce280d713ddc0486a580d8f?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:5yprM8km16jU3eXi0M9HRD"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        },
+        "href" : "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+        "id" : "7n2Ycct7Beij7Dj7meI4X0",
+        "name" : "TWICE",
+        "type" : "artist",
+        "uri" : "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "disc_number" : 1,
+      "duration_ms" : 217650,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/5Pz3p3NHO4he2IT2uMw0gA"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/5Pz3p3NHO4he2IT2uMw0gA",
+      "id" : "5Pz3p3NHO4he2IT2uMw0gA",
+      "is_local" : false,
+      "name" : "BREAKTHROUGH - Korean Ver.",
+      "preview_url" : "https://p.scdn.co/mp3-preview/b33826952320cfe7deee1e9b29aaf07d31d6179e?cid=a99753b000db451b9a40b2420e8cdfcb",
+      "track_number" : 7,
+      "type" : "track",
+      "uri" : "spotify:track:5Pz3p3NHO4he2IT2uMw0gA"
+    } ],
+    "limit" : 50,
+    "next" : null,
+    "offset" : 0,
+    "previous" : null,
+    "total" : 7
+  },
+  "type" : "album",
+  "uri" : "spotify:album:4EG4E0Uk0HpJBgOMgXI26z"
+}

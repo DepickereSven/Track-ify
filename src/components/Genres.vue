@@ -1,23 +1,26 @@
 <template>
-    <div class="container">
-        <doughnut-chart v-if="loaded" :chartdata="chartData" :options="options"></doughnut-chart>
+    <div id="spanText">
+        <div v-if="genres.length === 1">
+            <span>{{genres[0]}}</span>
+        </div>
+        <div v-else v-for="(genre, i) in genres">
+            <span class="whitespace" v-if="genres.length > i + 1">{{genre}},</span>
+            <span v-else>{{genre}}</span>
+        </div>
     </div>
 </template>
 
 <script>
 
-    import doughnutChart from "./charts/Doughnut"
-
     export default {
         name: "Genres",
-        components: {doughnutChart},
-        props: ["loaded", "chartData"],
-        data: () => ({
-            options: {responsive: true, maintainAspectRatio: false}
-        })
+        props: ["genres"]
     }
+
 </script>
 
 <style scoped>
+
+
 
 </style>

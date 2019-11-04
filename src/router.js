@@ -16,9 +16,19 @@ const router = new Router({
             path: '/home',
             name: 'home',
             component: () => import('./views/Home.vue'),
-            // meta: {
-            //     requiresAuth: true
-            // }
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path: '/details',
+            name: 'details',
+            component: () => import('./views/Details.vue'),
+            props: true,
+            meta: {
+                requiresAuth: true,
+                layout: 'empty'
+            }
         },
         {
             path: '/login',

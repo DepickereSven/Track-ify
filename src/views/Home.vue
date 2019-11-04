@@ -1,18 +1,17 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center column>
-            
             <v-list rounded class="list">
                 <v-expansion-panels>
                     <v-expansion-panel>
                         <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
                         <v-expansion-panel-content v-if="chartDraw">
-                            <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
+                            <GenresChart :loaded="loaded" :chart-data="genresChart"></GenresChart>
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 </v-expansion-panels>
-                <v-list-item-group v-model="item" color="primary">
-                    <v-list-item v-for="(item, i) in data" :key="i">
+                <v-list-item-group color="primary">
+                    <v-list-item v-for="(item, i) in data" :key="i" @click="details(item)">
                         <v-list-item-avatar tile>
                             <img :src="item.album.images[item.album.images.length -1].url" :alt="item.album.images[item.album.images.length -1].value"/>
                         </v-list-item-avatar>
@@ -28,8 +27,10 @@
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
+
             <audio :src="currentSong.current" @timeupdate="currentSong.time = $event.target.currentTime" ref="audio" @ended="musicEnded" autoload preload="auto" autoplay></audio>
             <MusicPlayer :current-song="currentSong" :time="currentSong.time" @stop="stopMusic"></MusicPlayer>
+
         </v-layout>
     </v-container>
 </template>
@@ -39,7 +40,7 @@
 
     import handle from "../assets/js/Vue/home/handle"
     import ArtistsList from "../components/ArtistsList"
-    import Genres from "../components/Genres"
+    import GenresChart from "../components/GenresChart"
     import MusicPlayer from "../components/MusicPlayer"
 
     export default {
@@ -48,11 +49,10 @@
         },
         components: {
             ArtistsList,
-            Genres,
+            GenresChart,
             MusicPlayer
         },
         data: () => ({
-            item: 1,
             data: [],
             artists: [],
             genres: [],
@@ -72,40 +72,41 @@
                 artists: [],
                 time: 0,
                 current: null
-            },
+            }
         }),
         methods: {
-            play: function (arg){
-                if (this.currentSong.isPlaying){
+            details: function (arg) {
+                handle.navigateToDetails(this, arg);
+            },
+            play: function (arg) {
+                if (this.currentSong.isPlaying) {
                     this.stopMusic();
                     this.startMusic(arg);
                 } else {
                     this.startMusic(arg);
                 }
             },
-            musicEnded: function (){
-                this.currentSong.isPlaying = false;
-            },
-            startMusic: function (arg){
+            startMusic: function (arg) {
                 this.currentSong.isPlaying = true;
                 this.currentSong.current = arg.preview_url;
                 this.currentSong.title = arg.name;
                 this.currentSong.artists = arg.artists;
             },
-            stopMusic: function (){
+            stopMusic: function () {
                 this.$refs.audio.pause();
                 this.currentSong.current = null;
                 this.musicEnded();
             },
+            musicEnded: function () {
+                this.currentSong.isPlaying = false;
+            },
             redrawChart: function () {
-                console.log(this.chartDraw, "before");
                 this.chartDraw = !this.chartDraw;
-                console.log(this.chartDraw, "after");
             },
 
         },
-        watch:{
-            time(time){
+        watch: {
+            time(time) {
                 if (Math.abs(time - this.$refs.audio.currentTime) > 0.5) {
                     this.$refs.audio.currentTime = time;
                 }
@@ -117,10 +118,9 @@
 
 <style scoped>
 
-    #inspire .list{
+    #inspire .list {
         max-width: 50%;
     }
-
 
 
 </style>

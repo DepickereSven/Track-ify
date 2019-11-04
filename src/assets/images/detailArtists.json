@@ -1,0 +1,38 @@
+[
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+    },
+    "followers": {
+      "href": null,
+      "total": 4075461
+    },
+    "genres": [
+      "k-pop",
+      "k-pop girl group"
+    ],
+    "href": "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
+    "id": "7n2Ycct7Beij7Dj7meI4X0",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/6b7377383979d8d8985786c1489503b356a55146",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/b20ba00710b8f313d0a029f33115da5cb5371b3e",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/2e9fe7717069b69f9b9168034f0312e932c8db5a",
+        "width": 160
+      }
+    ],
+    "name": "TWICE",
+    "popularity": 82,
+    "type": "artist",
+    "uri": "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+  }
+]

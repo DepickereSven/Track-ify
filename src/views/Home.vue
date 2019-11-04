@@ -6,7 +6,7 @@
                 <v-expansion-panels>
                     <v-expansion-panel>
                         <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
-                        <v-expansion-panel-content v-show="chartDraw">
+                        <v-expansion-panel-content v-if="chartDraw">
                             <Genres :loaded="loaded" :chart-data="genresChart"></Genres>
                         </v-expansion-panel-content>
                     </v-expansion-panel>

@@ -9,7 +9,7 @@
     import doughnutChart from "./charts/Doughnut"
 
     export default {
-        name: "Genres",
+        name: "GenresChart",
         components: {doughnutChart},
         props: ["loaded", "chartData"],
         data: () => ({

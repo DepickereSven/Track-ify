@@ -31,6 +31,17 @@ export default (function () {
         // });
     };
 
+    const navigateToDetails = function (_self, arg) {
+        _self.$router.push(
+            {
+                name: "details",
+                params: {
+                    songDetails: arg,
+                    artists: findArtistsOfThatSong(_self, arg)
+                }
+            })
+    };
+
     //**** HELP FUNCTIONS ****//
 
     const getIDsArtists = function (_self) {
@@ -47,17 +58,19 @@ export default (function () {
         });
     }
 
-
-
-
-
-
-
-
-
+    function findArtistsOfThatSong(_self, arg) {
+        let artists = arg.artists;
+        return artists.filter(function (el) {
+            let index = _self.artists.findIndex((element => element.id === el.id));
+            if (index !== -1){
+                return _self.artists[index];
+            }
+        });
+    }
 
     return {
-        init
+        init,
+        navigateToDetails
     }
 
 })();

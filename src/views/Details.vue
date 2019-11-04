@@ -14,27 +14,48 @@
                 <div class="row">
                     <div class="column first">
                         <v-card-title class="display-2 font-weight-light">
-                            {{artists[0].name}}
+                            <div class="row">
+                                {{artists[0].name}}
+                                <v-chip class="ma-2" color="indigo" text-color="white">
+                                    <v-avatar left>
+                                        <font-awesome-icon :icon="['fas', 'heart']" size="3x"></font-awesome-icon>
+                                    </v-avatar>
+                                    {{formatNumbers}}
+                                </v-chip>
+                            </div>
                         </v-card-title>
                         <v-card-subtitle class="">
                             <Genres :genres="artists[0].genres"></Genres>
                         </v-card-subtitle>
 
-
                         <v-list-item three-line>
+
                             <v-list-item-content>
-                                <div class="overline mb-4">OVERLINE</div>
-                                <v-list-item-title class="headline mb-1">Headline 5</v-list-item-title>
-                                <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>
+                                <div class="overline mb-4">{{songDetails.album.album_type}} - {{songDetails.album.release_date}}</div>
+                                <v-list-item-title class="headline mb-1">{{songDetails.album.name}}</v-list-item-title>
+                                <v-list-item-subtitle>Number of Songs: {{songDetails.album.total_tracks}}</v-list-item-subtitle>
                             </v-list-item-content>
 
-                            <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+                            <v-list-item-avatar tile size="80">
+                                <v-img :src="songDetails.album.images[0].url"></v-img>
+                            </v-list-item-avatar>
                         </v-list-item>
 
-                        <v-card-actions>
-                            <v-btn text>Button</v-btn>
-                            <v-btn text>Button</v-btn>
-                        </v-card-actions>
+
+<!--                        <v-list-item three-line>-->
+<!--                            <v-list-item-content>-->
+<!--                                <div class="overline mb-4">OVERLINE</div>-->
+<!--                                <v-list-item-title class="headline mb-1">Headline 5</v-list-item-title>-->
+<!--                                <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle>-->
+<!--                            </v-list-item-content>-->
+
+<!--                            <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>-->
+<!--                        </v-list-item>-->
+
+<!--                        <v-card-actions>-->
+<!--                            <v-btn text>Button</v-btn>-->
+<!--                            <v-btn text>Button</v-btn>-->
+<!--                        </v-card-actions>-->
                     </div>
                     <div class="column second">
                         <v-img :src="artists[0].images[0].url"></v-img>
@@ -61,8 +82,17 @@
         // props: ["songDetails", "artists"],
         data: () => ({
             songDetails: null,
-            artists: null
-        })
+            artists: null,
+            album: null
+        }),
+        computed: {
+            formatNumbers: function () {
+                return this.artists[0].followers.total.toLocaleString(
+                    undefined,
+                    { minimumFractionDigits: 0 }
+                );
+            }
+        }
     }
 </script>
 
@@ -80,6 +110,10 @@
 
     .card-v .row .column.second{
         width: 35%;
+    }
+
+    .card-v .row .column.first .row{
+        justify-content: space-between;
     }
 
 </style>

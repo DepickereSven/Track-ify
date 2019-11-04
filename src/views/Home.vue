@@ -1,7 +1,6 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center column>
-
             <v-list rounded class="list">
                 <v-expansion-panels>
                     <v-expansion-panel>
@@ -76,13 +75,7 @@
         }),
         methods: {
             details: function (arg) {
-                this.$router.push(
-                    {
-                        name: "details",
-                        params: {
-                            songDetails: arg
-                        }
-                    })
+                handle.navigateToDetails(this, arg);
             },
             play: function (arg) {
                 if (this.currentSong.isPlaying) {

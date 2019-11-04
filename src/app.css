@@ -1,3 +1,8 @@
-#inspire .artists{
+
+#inspire #spanText{
     display: flex;
+}
+
+#inspire .whitespace {
+    margin-right: 4px;
 }

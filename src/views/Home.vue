@@ -12,7 +12,7 @@
                     </v-expansion-panel>
                 </v-expansion-panels>
                 <v-list-item-group v-model="item" color="primary">
-                    <v-list-item v-for="(item, i) in data" :key="i">
+                    <v-list-item v-for="(item, i) in data" :key="i" @click="details(item)">
                         <v-list-item-avatar tile>
                             <img :src="item.album.images[item.album.images.length -1].url" :alt="item.album.images[item.album.images.length -1].value"/>
                         </v-list-item-avatar>
@@ -75,6 +75,9 @@
             },
         }),
         methods: {
+            details: function (arg){
+                console.log(arg);
+            },
             play: function (arg){
                 if (this.currentSong.isPlaying){
                     this.stopMusic();

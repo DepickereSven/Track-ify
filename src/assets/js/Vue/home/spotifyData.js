@@ -5,7 +5,7 @@
 import utils from "../utils"
 
 export default (function () {
-    
+
     const getGenresAndPrepareCharData = function (_self) {
         getAllGenres(_self);
         getChartData(_self);

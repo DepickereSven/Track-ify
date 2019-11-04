@@ -102,7 +102,8 @@
         data: () => ({
             songDetails: null,
             artists: null,
-            album: null
+            album: null,
+            allAlbumInfo: null
         }),
         computed: {
             formatNumbers: function () {

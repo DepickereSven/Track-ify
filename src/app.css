@@ -1,6 +1,7 @@
 
 #inspire #spanText{
     display: flex;
+    text-transform: capitalize;
 }
 
 #inspire .whitespace {

@@ -7,3 +7,8 @@
 #inspire .whitespace {
     margin-right: 4px;
 }
+
+#inspire .s-row{
+    display: flex;
+    flex-direction: row;
+}

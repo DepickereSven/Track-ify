@@ -60,12 +60,15 @@ export default (function () {
 
     function findArtistsOfThatSong(_self, arg) {
         let artists = arg.artists;
-        return artists.filter(function (el) {
+        let resultArtists =  artists.map(function (el) {
             let index = _self.artists.findIndex((element => element.id === el.id));
             if (index !== -1){
                 return _self.artists[index];
             }
         });
+        return resultArtists.filter(function (el) {
+            return typeof el === "object"
+        })
     }
 
     return {

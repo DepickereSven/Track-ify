@@ -10,7 +10,7 @@
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 </v-expansion-panels>
-                <v-list-item-group v-model="item" color="primary">
+                <v-list-item-group color="primary">
                     <v-list-item v-for="(item, i) in data" :key="i" @click="details(item)">
                         <v-list-item-avatar tile>
                             <img :src="item.album.images[item.album.images.length -1].url" :alt="item.album.images[item.album.images.length -1].value"/>
@@ -27,8 +27,10 @@
                     </v-list-item>
                 </v-list-item-group>
             </v-list>
+
             <audio :src="currentSong.current" @timeupdate="currentSong.time = $event.target.currentTime" ref="audio" @ended="musicEnded" autoload preload="auto" autoplay></audio>
             <MusicPlayer :current-song="currentSong" :time="currentSong.time" @stop="stopMusic"></MusicPlayer>
+
         </v-layout>
     </v-container>
 </template>
@@ -51,7 +53,6 @@
             MusicPlayer
         },
         data: () => ({
-            item: 1,
             data: [],
             artists: [],
             genres: [],
@@ -71,7 +72,7 @@
                 artists: [],
                 time: 0,
                 current: null
-            },
+            }
         }),
         methods: {
             details: function (arg) {

@@ -1,7 +1,7 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center column>
-            
+
             <v-list rounded class="list">
                 <v-expansion-panels>
                     <v-expansion-panel>
@@ -75,40 +75,44 @@
             },
         }),
         methods: {
-            details: function (arg){
-                console.log(arg);
+            details: function (arg) {
+                this.$router.push(
+                    {
+                        name: "details",
+                        params: {
+                            songDetails: arg
+                        }
+                    })
             },
-            play: function (arg){
-                if (this.currentSong.isPlaying){
+            play: function (arg) {
+                if (this.currentSong.isPlaying) {
                     this.stopMusic();
                     this.startMusic(arg);
                 } else {
                     this.startMusic(arg);
                 }
             },
-            musicEnded: function (){
-                this.currentSong.isPlaying = false;
-            },
-            startMusic: function (arg){
+            startMusic: function (arg) {
                 this.currentSong.isPlaying = true;
                 this.currentSong.current = arg.preview_url;
                 this.currentSong.title = arg.name;
                 this.currentSong.artists = arg.artists;
             },
-            stopMusic: function (){
+            stopMusic: function () {
                 this.$refs.audio.pause();
                 this.currentSong.current = null;
                 this.musicEnded();
             },
+            musicEnded: function () {
+                this.currentSong.isPlaying = false;
+            },
             redrawChart: function () {
-                console.log(this.chartDraw, "before");
                 this.chartDraw = !this.chartDraw;
-                console.log(this.chartDraw, "after");
             },
 
         },
-        watch:{
-            time(time){
+        watch: {
+            time(time) {
                 if (Math.abs(time - this.$refs.audio.currentTime) > 0.5) {
                     this.$refs.audio.currentTime = time;
                 }
@@ -120,10 +124,9 @@
 
 <style scoped>
 
-    #inspire .list{
+    #inspire .list {
         max-width: 50%;
     }
-
 
 
 </style>

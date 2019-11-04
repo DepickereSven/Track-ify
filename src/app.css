@@ -13,3 +13,7 @@
     flex-direction: row;
     width: 100%;
 }
+
+#inspire .mouse-pointer{
+    cursor: pointer;
+}  

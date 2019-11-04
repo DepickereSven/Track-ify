@@ -13,7 +13,7 @@
 
                     <v-spacer></v-spacer>
 
-                    <v-list-item-icon @click="stop">
+                    <v-list-item-icon @click="stop" class="mouse-pointer">
                         <font-awesome-icon :icon="['fas', 'stop']" size="lg"></font-awesome-icon>
                     </v-list-item-icon>
                 </v-list-item>

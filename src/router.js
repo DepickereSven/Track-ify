@@ -24,9 +24,11 @@ const router = new Router({
             path: '/details',
             name: 'details',
             component: () => import('./views/Details.vue'),
-            // meta: {
-            //     requiresAuth: true
-            // }
+            props: true,
+            meta: {
+                // requiresAuth: true,
+                layout: 'empty'
+            }
         },
         {
             path: '/login',

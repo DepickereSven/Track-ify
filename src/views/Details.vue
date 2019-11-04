@@ -17,7 +17,7 @@
                             {{artists[0].name}}
                         </v-card-title>
                         <v-card-subtitle class="">
-
+                            <Genres :genres="artists[0].genres"></Genres>
                         </v-card-subtitle>
 
 
@@ -49,10 +49,14 @@
 <script>
 
     import handle from "../assets/js/Vue/details/handle"
+    import Genres from "../components/Genres"
 
     export default {
         created: function () {
             handle.init(this);
+        },
+        components: {
+            Genres
         },
         // props: ["songDetails", "artists"],
         data: () => ({

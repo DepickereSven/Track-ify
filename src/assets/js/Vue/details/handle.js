@@ -12,11 +12,11 @@ import spotifyData from "../home/spotifyData";
 export default (function () {
 
     const init = function (_self) {
-        // _self.songDetails = songData;
-        // _self.artists = artistsData;
-        // _self.album = album;
-        // _self.allAlbumInfo = allAlbumInfo;
-        getAlbums(_self);
+        _self.songDetails = songData;
+        _self.artists = artistsData;
+        _self.album = album;
+        _self.allAlbumInfo = allAlbumInfo;
+        // getAlbums(_self);
     };
 
 

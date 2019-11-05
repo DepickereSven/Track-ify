@@ -16,9 +16,9 @@ const router = new Router({
             path: '/home',
             name: 'home',
             component: () => import('./views/Home.vue'),
-            meta: {
-                requiresAuth: true
-            }
+            // meta: {
+            //     requiresAuth: true
+            // }
         },
         {
             path: '/details',
@@ -26,7 +26,7 @@ const router = new Router({
             component: () => import('./views/Details.vue'),
             props: true,
             meta: {
-                requiresAuth: true,
+                // requiresAuth: true,
                 layout: 'empty'
             }
         },

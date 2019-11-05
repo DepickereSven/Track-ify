@@ -1,6 +1,6 @@
 <template>
     <v-container fluid fill-height>
-        <v-layout align-center justify-center>
+        <v-layout align-center justify-center class="s-column">
             <v-card class="card-v">
 
                 <div class="s-row">
@@ -66,6 +66,8 @@
                 </div>
             </v-card>
 
+            <Albums></Albums>
+
             <audio :src="currentSong.current" @timeupdate="currentSong.time = $event.target.currentTime" ref="audio" @ended="musicEnded" autoload preload="auto" autoplay></audio>
             <MusicPlayer :current-song="currentSong" :time="currentSong.time" @stop="stopMusic"></MusicPlayer>
 
@@ -79,6 +81,7 @@
     import Genres from "../components/Genres"
     import ArtistsList from "../components/ArtistsList"
     import MusicPlayer from "../components/MusicPlayer"
+    import Albums from "../components/Albums"
 
     export default {
         created: function () {
@@ -87,10 +90,13 @@
         components: {
             Genres,
             ArtistsList,
-            MusicPlayer
+            MusicPlayer,
+            Albums
         },
-        props: ["songDetails", "artists"],
+        // props: ["songDetails", "artists"],
         data: () => ({
+            songDetails: null,
+            artists: null,
             album: {
                 tracks: {}
             },
@@ -129,7 +135,8 @@
         },
         computed: {
             formatNumbers: function () {
-                return this.$props.artists[0].followers.total.toLocaleString(
+                // return this.$props.artists[0].followers.total.toLocaleString(
+                return this.artists[0].followers.total.toLocaleString(
                     undefined,
                     {minimumFractionDigits: 0}
                 );

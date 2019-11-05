@@ -20,10 +20,10 @@
 <!--                        <v-img height="120" width="160" :src="require('../../assets/images/flags/' + flag.toLowerCase() + '.svg')"></v-img>-->
 <!--                    </template>-->
 <!--                </div>-->
-<!--                <v-card-actions>-->
-<!--                    <v-spacer></v-spacer>-->
-<!--                    <v-btn color="green darken-1" text @click="dialog = false">Close</v-btn>-->
-<!--                </v-card-actions>-->
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="green darken-1" text @click="dialog = false">Close</v-btn>
+                </v-card-actions>
             </v-card>
         </v-dialog>
     </div>

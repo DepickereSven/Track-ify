@@ -11,11 +11,11 @@
                     </v-expansion-panel>
                 </v-expansion-panels>
                 <v-list-item-group color="primary">
-                    <v-list-item v-for="(item, i) in data" :key="i" @click="details(item)">
-                        <v-list-item-avatar tile>
+                    <v-list-item v-for="(item, i) in data" :key="i">
+                        <v-list-item-avatar tile @click="details(item)">
                             <img :src="item.album.images[item.album.images.length -1].url" :alt="item.album.images[item.album.images.length -1].value"/>
                         </v-list-item-avatar>
-                        <v-list-item-content>
+                        <v-list-item-content @click="details(item)">
                             <v-list-item-title v-text="item.name"></v-list-item-title>
                             <v-list-item-subtitle>
                                 <ArtistsList class="artists" :artists="item.artists"></ArtistsList>

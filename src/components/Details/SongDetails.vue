@@ -100,6 +100,7 @@
 
     .card-v .s-row {
         justify-content: space-between;
+        width: 100%;
     }
 
     .card-v .s-row .column.first {

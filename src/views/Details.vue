@@ -2,7 +2,7 @@
     <v-container fluid fill-height>
         <v-layout align-center justify-center class="s-column">
 
-            <v-row align="center" class="detailsWidth">
+            <div class="detailsWidth s-row">
                 <v-item-group v-model="window" class="shrink mr-6" mandatory tag="v-flex">
                     <v-item v-for="(comp, n) in itemComponents" :key="n" v-slot:default="{ active, toggle }">
                         <div>
@@ -30,7 +30,7 @@
 
                     </v-window>
                 </v-col>
-            </v-row>
+            </div>
 
             <audio :src="currentSong.current" @timeupdate="currentSong.time = $event.target.currentTime" ref="audio" @ended="musicEnded" autoload preload="auto" autoplay></audio>
             <MusicPlayer :current-song="currentSong" :time="currentSong.time" @stop="stopMusic"></MusicPlayer>
@@ -117,7 +117,9 @@
                             songDetails: this.songDetails
                         };
                     case "Albums":
-                        return {};
+                        return {
+                            allAlbumInfo: this.allAlbumInfo
+                        };
                 }
             },
             currentMethods: function (comp) {
@@ -137,6 +139,9 @@
 
     .detailsWidth {
         width: 70%;
+    }
+    .detailsWidth.s-row{
+        align-items: center;
     }
 
 </style>

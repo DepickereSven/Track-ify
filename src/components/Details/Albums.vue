@@ -1,5 +1,5 @@
 <template>
-    <v-sheet class="mx-auto" elevation="8" max-width="800">
+    <v-sheet class="mx-auto" elevation="8">
         <v-slide-group v-model="model" class="pa-4" show-arrows>
             <v-slide-item v-for="n in 15" :key="n" v-slot:default="{ active, toggle }">
                 <v-card :color="active ? 'primary' : 'grey lighten-1'" class="ma-4" height="200" width="100" @click="toggle">
@@ -25,6 +25,10 @@
 <script>
     export default {
         name: "Albums",
+        props: ["allAlbumInfo"],
+        created : function () {
+            console.log(this.$props.allAlbumInfo)
+        },
         data: () => ({
             model: null,
         })

@@ -36,6 +36,10 @@ export default (function () {
         });
     }
 
+    // TODO
+    function filterAllAlbumsBasedOnNation() {
+        
+    }
 
     return {
         init

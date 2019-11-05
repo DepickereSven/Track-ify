@@ -1,11 +1,11 @@
 <template>
     <v-sheet class="mx-auto" elevation="8">
         <v-slide-group v-model="model" class="pa-4" show-arrows>
-            <v-slide-item v-for="n in 15" :key="n" v-slot:default="{ active, toggle }">
-                <v-card :color="active ? 'primary' : 'grey lighten-1'" class="ma-4" height="200" width="100" @click="toggle">
+            <v-slide-item v-for="(albums, n) in allAlbumInfo.items" :key="n" v-slot:default="{ active, toggle }">
+                <v-card class="ma-4" height="200" width="200" @click="toggle">
                     <v-row class="fill-height" align="center" justify="center">
                         <v-scale-transition>
-                            <v-icon v-if="active" color="white" size="48" v-text="'mdi-close-circle-outline'"></v-icon>
+                            <v-img :src="albums.images[0].url" contain></v-img>
                         </v-scale-transition>
                     </v-row>
                 </v-card>
@@ -15,7 +15,16 @@
         <v-expand-transition>
             <v-sheet v-if="model != null" color="grey lighten-4" height="200" tile>
                 <v-row class="fill-height" align="center" justify="center">
-                    <h3 class="title">Selected {{ model }}</h3>
+                    <v-list-item>
+                        <v-list-item-content>
+                            <div class="overline">{{allAlbumInfo.items[model].album_type}} - {{allAlbumInfo.items[model].release_date}}</div>
+                            <v-list-item-title class="title">{{allAlbumInfo.items[model].name}}</v-list-item-title>
+                            <v-list-item-subtitle>Number of Songs: {{allAlbumInfo.items[model].total_tracks}}</v-list-item-subtitle>
+                            <NationFlags :flags="allAlbumInfo.items[model].available_markets"></NationFlags>
+                        </v-list-item-content>
+
+                    </v-list-item>
+
                 </v-row>
             </v-sheet>
         </v-expand-transition>
@@ -23,18 +32,37 @@
 </template>
 
 <script>
+
+    import NationFlags from "./NationFlags"
+
     export default {
         name: "Albums",
         props: ["allAlbumInfo"],
         created : function () {
-            console.log(this.$props.allAlbumInfo)
+
+        },
+        components: {
+            NationFlags
         },
         data: () => ({
             model: null,
-        })
+        }),
+        methods: {
+            flagImages: function (flag) {
+                return ``
+            }
+        }
     }
 </script>
 
 <style scoped>
+
+    #inspire .v-responsive{
+        position: inherit;
+    }
+
+    #inspire .mx-auto .fill-height{
+        text-align: center;
+    }
 
 </style>

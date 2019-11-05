@@ -91,8 +91,10 @@
         },
         props: ["songDetails", "artists"],
         data: () => ({
-            album: null,
-            allAlbumInfo: null,
+            album: {
+                tracks: {}
+            },
+            allAlbumInfo: {},
             currentSong: {
                 isPlaying: false,
                 title: null,

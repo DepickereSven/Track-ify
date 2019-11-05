@@ -84,7 +84,6 @@
         },
         computed: {
             formatNumbers: function () {
-                // return this.$props.artists[0].followers.total.toLocaleString(
                 return this.$props.artists[0].followers.total.toLocaleString(
                     undefined,
                     {minimumFractionDigits: 0}

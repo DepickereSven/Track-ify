@@ -4,11 +4,16 @@
 
             <v-row align="center" class="detailsWidth">
                 <v-item-group v-model="window" class="shrink mr-6" mandatory tag="v-flex">
-                    <v-item v-for="n in length" :key="n" v-slot:default="{ active, toggle }">
+                    <v-item v-for="(comp, n) in itemComponents" :key="n" v-slot:default="{ active, toggle }">
                         <div>
-                            <v-btn :input-value="active" icon @click="toggle">
-                                <font-awesome-icon :icon="['fas', 'circle']" size="lg"></font-awesome-icon>
-                            </v-btn>
+                            <v-tooltip bottom>
+                                <template v-slot:activator="{ on }">
+                                    <v-btn :input-value="active" icon @click="toggle" v-on="on">
+                                        <font-awesome-icon :icon="['fas', 'circle']" size="lg"></font-awesome-icon>
+                                    </v-btn>
+                                </template>
+                                <span>{{comp.toolTip}}</span>
+                            </v-tooltip>
                         </div>
                     </v-item>
                 </v-item-group>
@@ -54,13 +59,14 @@
         data: () => ({
             itemComponents: [
                 {
-                    name: "SongDetails"
+                    name: "SongDetails",
+                    toolTip: "Song Details"
                 },
                 {
-                    name: "Albums"
+                    name: "Albums",
+                    toolTip: "All Albums"
                 }
             ],
-            length: 2,
             window: 0,
 
             songDetails: null,

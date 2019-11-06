@@ -7,6 +7,7 @@ import songData from "../../../images/detailsSongDetails"
 import artistsData from "../../../images/detailArtists"
 import album from "../../../images/detailsAlbum"
 import allAlbumInfo from "../../../images/detailsAllAlbum"
+import otherArtistsDetails from "../../../images/otherArtistsDetails"
 import spotifyData from "../home/spotifyData";
 
 export default (function () {
@@ -16,7 +17,7 @@ export default (function () {
         _self.artists = artistsData;
         _self.album = album;
         _self.allAlbumInfo = allAlbumInfo;
-        getOtherArtistsFromAlbums(_self);
+        _self.otherArtistsDetails = otherArtistsDetails
         // getAlbums(_self);
     };
 
@@ -45,9 +46,15 @@ export default (function () {
 
     function getOtherArtistsFromAlbums(_self) {
         let mainArtist = _self.album.artists[0].id;
-        _self.otherArtists = _self.album.tracks.items.map(function (el) {
+        _self.album.tracks.items.map(function (el) {
             return el.artists.filter((ar => ar.id !== mainArtist));
+        }).forEach(function (element) {
+            if (element.length !== 0){
+                _self.otherArtists.push(element[0])
+            }
         });
+        //TODO in cause of empty
+        getArtistsDetails(_self);
     }
 
 
@@ -58,6 +65,27 @@ export default (function () {
                 _self.window = 0;
             }).catch(function (error) {
             console.error(error);
+        });
+    }
+
+    function getArtistsDetails(_self) {
+        spotify.configuration.spotifyApi.getArtists(getIDsArtists(_self))
+            .then(function(artistsInfo) {
+                _self.otherArtistsDetails = artistsInfo.artists;
+            }).catch(function(error) {
+            console.error(error);
+        })
+    }
+
+    const getIDsArtists = function (_self) {
+        return makeString(_self.otherArtists.map(function (el) {
+            return el.id
+        }))
+    };
+
+    function makeString (array) {
+        return array.map(function (el) {
+            return el;
         });
     }
 

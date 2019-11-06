@@ -35,8 +35,8 @@
                 </v-list-item>
 
                 <v-list rounded>
-                    <v-list-item-group color="primary">
-                        <v-list-item v-for="(song, i) in album.tracks.items" :key="i">
+                    <v-list-item-group color="primary" >
+                        <v-list-item v-for="(song, i) in album.tracks.items" :key="i" @click="play(song)">
 
                             <v-list-item-avatar tile>
                                 {{i + 1}}
@@ -49,7 +49,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
 
-                            <v-list-item-action @click="play(song)">
+                            <v-list-item-action>
                                 <font-awesome-icon :icon="['fas', 'play']" size="lg" pull="right"></font-awesome-icon>
                             </v-list-item-action>
 

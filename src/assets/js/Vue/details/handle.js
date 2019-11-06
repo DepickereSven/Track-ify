@@ -13,22 +13,22 @@ import spotifyData from "../home/spotifyData";
 export default (function () {
 
     const init = function (_self) {
-        _self.songDetails = songData;
-        _self.artists = artistsData;
-        _self.album = album;
-        _self.allAlbumInfo = allAlbumInfo;
-        _self.otherArtistsDetails = otherArtistsDetails.artists
-        // getAlbums(_self);
+        // _self.songDetails = songData;
+        // _self.artists = artistsData;
+        // _self.album = album;
+        // _self.allAlbumInfo = allAlbumInfo;
+        // _self.otherArtistsDetails = otherArtistsDetails.artists
+        getAlbums(_self);
     };
 
 
     function getAlbums(_self) {
-        spotify.configuration.spotifyApi.getAlbum(_self.songDetails.album.id)
+        spotify.configuration.spotifyApi.getAlbum(_self.$props.songDetails.album.id)
             .then(function (result) {
                 _self.album = result;
                 getOtherArtistsFromAlbums(_self);
             }).then(function () {
-            return spotify.configuration.spotifyApi.getArtistAlbums(_self.artists[0].id, {
+            return spotify.configuration.spotifyApi.getArtistAlbums(_self.$props.artists[0].id, {
                 include_groups: "album,single",
                 limit: 50
             });
@@ -53,8 +53,9 @@ export default (function () {
                 _self.otherArtists.push(element[0])
             }
         });
-        //TODO in cause of empty
-        getArtistsDetails(_self);
+        if (_self.otherArtists.length !== 0){
+            getArtistsDetails(_self);
+        }
     }
 
 

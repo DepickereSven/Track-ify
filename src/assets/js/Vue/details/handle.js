@@ -3,6 +3,7 @@
  **/
 
 import spotify from "../../spotify"
+import utils from "../utils"
 import songData from "../../../images/detailsSongDetails"
 import artistsData from "../../../images/detailArtists"
 import album from "../../../images/detailsAlbum"
@@ -50,10 +51,17 @@ export default (function () {
             return el.artists.filter((ar => ar.id !== mainArtist));
         }).forEach(function (element) {
             if (element.length !== 0){
-                _self.otherArtists.push(element[0])
+                if (element.length === 1){
+                    _self.otherArtists.push(element[0])
+                } else {
+                    element.forEach(function (ele) {
+                        _self.otherArtists.push(ele);
+                    });
+                }
             }
         });
         if (_self.otherArtists.length !== 0){
+            _self.otherArtists = utils.makeUnique(_self.otherArtists, "id");
             getArtistsDetails(_self);
         }
     }

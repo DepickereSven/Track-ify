@@ -1,16 +1,16 @@
 {
   "album": {
-    "album_type": "ALBUM",
+    "album_type": "SINGLE",
     "artists": [
       {
         "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+          "spotify": "https://open.spotify.com/artist/3JUj7c2h5xkdOf0GJ07VWE"
         },
-        "href": "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
-        "id": "7n2Ycct7Beij7Dj7meI4X0",
-        "name": "TWICE",
+        "href": "https://api.spotify.com/v1/artists/3JUj7c2h5xkdOf0GJ07VWE",
+        "id": "3JUj7c2h5xkdOf0GJ07VWE",
+        "name": "Yubin",
         "type": "artist",
-        "uri": "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+        "uri": "spotify:artist:3JUj7c2h5xkdOf0GJ07VWE"
       }
     ],
     "available_markets": [
@@ -94,44 +94,54 @@
       "ZA"
     ],
     "external_urls": {
-      "spotify": "https://open.spotify.com/album/4EG4E0Uk0HpJBgOMgXI26z"
+      "spotify": "https://open.spotify.com/album/6hM2rd6v2VO3VUAyTW3GTm"
     },
-    "href": "https://api.spotify.com/v1/albums/4EG4E0Uk0HpJBgOMgXI26z",
-    "id": "4EG4E0Uk0HpJBgOMgXI26z",
+    "href": "https://api.spotify.com/v1/albums/6hM2rd6v2VO3VUAyTW3GTm",
+    "id": "6hM2rd6v2VO3VUAyTW3GTm",
     "images": [
       {
         "height": 640,
-        "url": "https://i.scdn.co/image/2672add02cdf23f490a3911b837e733a48f66971",
+        "url": "https://i.scdn.co/image/6b2c280c9107de2cb6f8f903bdbe9d75205ec13f",
         "width": 640
       },
       {
         "height": 300,
-        "url": "https://i.scdn.co/image/04319f7e58f94b9085094175566103e9b933cabb",
+        "url": "https://i.scdn.co/image/9f46484bf4297dd02ee83c8213d5f6f3be43c037",
         "width": 300
       },
       {
         "height": 64,
-        "url": "https://i.scdn.co/image/f652bf82a916fb20313133b2efed86a5a06b7db9",
+        "url": "https://i.scdn.co/image/93c566a703fd57babaf8008e0aeb60923bd47dc2",
         "width": 64
       }
     ],
-    "name": "Feel Special",
-    "release_date": "2019-09-23",
+    "name": "Start of the End",
+    "release_date": "2019-10-30",
     "release_date_precision": "day",
-    "total_tracks": 7,
+    "total_tracks": 2,
     "type": "album",
-    "uri": "spotify:album:4EG4E0Uk0HpJBgOMgXI26z"
+    "uri": "spotify:album:6hM2rd6v2VO3VUAyTW3GTm"
   },
   "artists": [
     {
       "external_urls": {
-        "spotify": "https://open.spotify.com/artist/7n2Ycct7Beij7Dj7meI4X0"
+        "spotify": "https://open.spotify.com/artist/3JUj7c2h5xkdOf0GJ07VWE"
       },
-      "href": "https://api.spotify.com/v1/artists/7n2Ycct7Beij7Dj7meI4X0",
-      "id": "7n2Ycct7Beij7Dj7meI4X0",
-      "name": "TWICE",
+      "href": "https://api.spotify.com/v1/artists/3JUj7c2h5xkdOf0GJ07VWE",
+      "id": "3JUj7c2h5xkdOf0GJ07VWE",
+      "name": "Yubin",
       "type": "artist",
-      "uri": "spotify:artist:7n2Ycct7Beij7Dj7meI4X0"
+      "uri": "spotify:artist:3JUj7c2h5xkdOf0GJ07VWE"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7m1YnY5oTXPJdUaRqRqgvD"
+      },
+      "href": "https://api.spotify.com/v1/artists/7m1YnY5oTXPJdUaRqRqgvD",
+      "id": "7m1YnY5oTXPJdUaRqRqgvD",
+      "name": "Yoonmirae",
+      "type": "artist",
+      "uri": "spotify:artist:7m1YnY5oTXPJdUaRqRqgvD"
     }
   ],
   "available_markets": [
@@ -215,21 +225,21 @@
     "ZA"
   ],
   "disc_number": 1,
-  "duration_ms": 206868,
+  "duration_ms": 200011,
   "explicit": false,
   "external_ids": {
-    "isrc": "US5TA1900074"
+    "isrc": "US5TA1900093"
   },
   "external_urls": {
-    "spotify": "https://open.spotify.com/track/0u7aRGM7YmvtsmG5NSrNsO"
+    "spotify": "https://open.spotify.com/track/4uu4bnkSI1JvTwKFUqq7Gp"
   },
-  "href": "https://api.spotify.com/v1/tracks/0u7aRGM7YmvtsmG5NSrNsO",
-  "id": "0u7aRGM7YmvtsmG5NSrNsO",
+  "href": "https://api.spotify.com/v1/tracks/4uu4bnkSI1JvTwKFUqq7Gp",
+  "id": "4uu4bnkSI1JvTwKFUqq7Gp",
   "is_local": false,
-  "name": "Feel Special",
-  "popularity": 86,
-  "preview_url": "https://p.scdn.co/mp3-preview/66ae76749f6fc2280f91c19da497d86cd07277a1?cid=a99753b000db451b9a40b2420e8cdfcb",
+  "name": "Silent Movie",
+  "popularity": 37,
+  "preview_url": "https://p.scdn.co/mp3-preview/e2660181b21cf4adfd853cc7e396f40982a5d21c?cid=a99753b000db451b9a40b2420e8cdfcb",
   "track_number": 1,
   "type": "track",
-  "uri": "spotify:track:0u7aRGM7YmvtsmG5NSrNsO"
+  "uri": "spotify:track:4uu4bnkSI1JvTwKFUqq7Gp"
 }

@@ -23,13 +23,7 @@
 <script>
     export default {
         name: "OtherArtists",
-        props: ["otherArtists"],
-        data: () => ({
-
-        }),
-        created() {
-            console.log(this.$props.otherArtists)
-        }
+        props: ["otherArtists"]
     }
 </script>
 

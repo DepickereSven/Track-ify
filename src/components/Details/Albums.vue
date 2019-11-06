@@ -21,6 +21,7 @@
                             <v-list-item-title class="title">{{allAlbumInfo.items[model].name}}</v-list-item-title>
                             <v-list-item-subtitle>Number of Songs: {{allAlbumInfo.items[model].total_tracks}}</v-list-item-subtitle>
                             <NationFlags :flags="allAlbumInfo.items[model].available_markets"></NationFlags>
+                            <v-btn class="" @click="showAlbum"></v-btn>
                         </v-list-item-content>
 
                     </v-list-item>
@@ -48,8 +49,8 @@
             model: null,
         }),
         methods: {
-            flagImages: function (flag) {
-                return ``
+            showAlbum: function () {
+                this.$emit("showAlbum", this.$props.allAlbumInfo.items[this.model].id)
             }
         }
     }

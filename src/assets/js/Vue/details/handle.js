@@ -64,10 +64,13 @@ export default (function () {
             .then(function (result) {
                 _self.album = result;
                 _self.window = 0;
+                resetVars(_self);
+                getOtherArtistsFromAlbums(_self);
             }).catch(function (error) {
-            console.error(error);
         });
     }
+
+    //**** HELP FUNCTIONS ****//
 
     function getArtistsDetails(_self) {
         spotify.configuration.spotifyApi.getArtists(getIDsArtists(_self))
@@ -88,6 +91,10 @@ export default (function () {
         return array.map(function (el) {
             return el;
         });
+    }
+
+    function resetVars(_self) {
+        _self.otherArtists = [];
     }
 
     return {

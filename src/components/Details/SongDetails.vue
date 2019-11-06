@@ -5,7 +5,7 @@
             <div class="column first">
 
                 <v-card-title class="display-2 font-weight-light">
-                    <div class="s-row">
+                    <div class="s-row" id="spanText">
                         {{artists[0].name}}
                         <v-chip class="ma-2" color="indigo" text-color="white">
                             <v-avatar left>

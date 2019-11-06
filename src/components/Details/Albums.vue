@@ -24,7 +24,7 @@
 
                             <v-list-item-action class="see-album-details">
                                 <v-btn class="" x-large rounded @click="showAlbum">
-                                    See songs of the {{allAlbumInfo.items[model].name}} ~ {{allAlbumInfo.items[model].album_type}}
+                                    See songs of {{allAlbumInfo.items[model].name}} ~ {{allAlbumInfo.items[model].album_type}}
                                 </v-btn>
                             </v-list-item-action>
                         </v-list-item-content>

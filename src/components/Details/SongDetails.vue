@@ -29,7 +29,7 @@
                     </v-list-item-content>
 
                     <v-list-item-avatar tile size="80">
-                        <v-img :src="songDetails.album.images[0].url"></v-img>
+                        <v-img :src="album.images[0].url"></v-img>
                     </v-list-item-avatar>
 
                 </v-list-item>

@@ -10,7 +10,7 @@ import artists from "../../../images/artists"
 export default (function () {
 
     const init = function (_self) {
-        _self.data = songData.items;
+        _self.data = songData;
         _self.artists = artists.artists;
         spotifyData.getGenresAndPrepareCharData(_self);
         _self.loaded = true;

@@ -16,6 +16,7 @@ export default (function () {
         _self.artists = artistsData;
         _self.album = album;
         _self.allAlbumInfo = allAlbumInfo;
+        getOtherArtistsFromAlbums(_self);
         // getAlbums(_self);
     };
 
@@ -24,9 +25,10 @@ export default (function () {
         spotify.configuration.spotifyApi.getAlbum(_self.songDetails.album.id)
             .then(function (result) {
                 _self.album = result;
+                getOtherArtistsFromAlbums(_self);
             }).then(function () {
             return spotify.configuration.spotifyApi.getArtistAlbums(_self.artists[0].id, {
-                include_groups: "album,single,appears_on,compilation",
+                include_groups: "album,single",
                 limit: 50
             });
         }).then(function (allAlbumInfo) {
@@ -39,6 +41,13 @@ export default (function () {
     // TODO
     function filterAllAlbumsBasedOnNation() {
 
+    }
+
+    function getOtherArtistsFromAlbums(_self) {
+        let mainArtist = _self.album.artists[0].id;
+        _self.otherArtists = _self.album.tracks.items.map(function (el) {
+            return el.artists.filter((ar => ar.id !== mainArtist));
+        });
     }
 
 

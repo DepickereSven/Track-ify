@@ -60,6 +60,7 @@
 
             <div class="column second">
                 <v-img :src="artists[0].images[0].url"></v-img>
+                <OtherArtists></OtherArtists>
             </div>
         </div>
     </v-card>
@@ -69,13 +70,15 @@
 
     import Genres from "../Genres"
     import ArtistsList from "../ArtistsList"
+    import OtherArtists from "./OtherArtists"
 
     export default {
         name: "SongDetails",
         props: ["artists", "album", "songDetails"],
         components: {
             Genres,
-            ArtistsList
+            ArtistsList,
+            OtherArtists
         },
         methods: {
             play: function (arg) {

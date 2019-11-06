@@ -1,8 +1,9 @@
 <template>
-    <v-card class="card-v">
 
+    <v-card class="card-v">
         <div class="s-row">
             <div class="column first">
+
                 <v-card-title class="display-2 font-weight-light">
                     <div class="s-row">
                         {{artists[0].name}}
@@ -64,6 +65,7 @@
             </div>
         </div>
     </v-card>
+    
 </template>
 
 <script>

@@ -24,25 +24,37 @@ export default (function () {
         spotify.configuration.spotifyApi.getAlbum(_self.songDetails.album.id)
             .then(function (result) {
                 _self.album = result;
-        }).then(function() {
+            }).then(function () {
             return spotify.configuration.spotifyApi.getArtistAlbums(_self.artists[0].id, {
                 include_groups: "album,single,appears_on,compilation",
                 limit: 50
             });
-        }).then(function(allAlbumInfo) {
+        }).then(function (allAlbumInfo) {
             _self.allAlbumInfo = allAlbumInfo;
-        }).catch(function(error) {
+        }).catch(function (error) {
             console.error(error);
         });
     }
 
     // TODO
     function filterAllAlbumsBasedOnNation() {
-        
+
+    }
+
+
+    function getDetailsAboutAnAlbum(_self, id) {
+        spotify.configuration.spotifyApi.getAlbum(id)
+            .then(function (result) {
+                _self.album = result;
+                _self.window = 0;
+            }).catch(function (error) {
+            console.error(error);
+        });
     }
 
     return {
-        init
+        init,
+        getDetailsAboutAnAlbum
     }
 
 })();

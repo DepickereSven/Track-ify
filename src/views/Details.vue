@@ -125,7 +125,7 @@
             currentMethods: function (comp) {
                 switch (comp.name) {
                     case "SongDetails":
-                        return {click: this.play};
+                        return {play: this.play};
                     case "Albums":
                         return {};
                 }

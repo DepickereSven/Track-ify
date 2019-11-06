@@ -18,9 +18,18 @@ export default (function () {
     }
 
 
+    function makeUnique(arrayOfObjects, valueOfUnique) {
+        return arrayOfObjects.filter((thing, index, self) =>
+            index === self.findIndex((t) => (
+                t[valueOfUnique] === thing[valueOfUnique]
+            ))
+        )
+    }
+
     return {
         sort,
-        getRandomColor
+        getRandomColor,
+        makeUnique
     }
 
 })();

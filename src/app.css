@@ -11,7 +11,11 @@
 #inspire .s-row{
     display: flex;
     flex-direction: row;
-    width: 100%;
+}
+
+#inspire .s-column{
+    display: flex;
+    flex-direction: column;
 }
 
 #inspire .mouse-pointer{

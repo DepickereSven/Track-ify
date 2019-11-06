@@ -118,7 +118,8 @@
                             artists: this.artists,
                             album: this.album,
                             // songDetails: this.$props.songDetails
-                            songDetails: this.songDetails
+                            songDetails: this.songDetails,
+                            otherArtists: this.otherArtists
                         };
                     case "Albums":
                         return {

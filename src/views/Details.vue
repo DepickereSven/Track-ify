@@ -55,7 +55,7 @@
             Albums,
             MusicPlayer
         },
-        // props: ["songDetails", "artists"],
+        props: ["songDetails", "artists"],
         data: () => ({
             itemComponents: [
                 {
@@ -70,11 +70,14 @@
             window: 0,
 
             otherArtists: [],
-            otherArtistsDetails: null,
-            songDetails: null,
-            artists: null,
+            otherArtistsDetails: [],
+            // songDetails: null,
+            // artists: null,
             album: {
-                tracks: {}
+                tracks: {},
+                images: [{
+                    url: ""
+                }]
             },
             allAlbumInfo: {},
             currentSong: {
@@ -115,11 +118,11 @@
                 switch (comp.name) {
                     case "SongDetails":
                         return {
-                            // artists: this.$props.artists,
-                            artists: this.artists,
+                            artists: this.$props.artists,
+                            // artists: this.artists,
                             album: this.album,
-                            // songDetails: this.$props.songDetails
-                            songDetails: this.songDetails,
+                            songDetails: this.$props.songDetails,
+                            // songDetails: this.songDetails,
                             otherArtists: this.otherArtistsDetails
                         };
                     case "Albums":

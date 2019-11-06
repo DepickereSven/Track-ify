@@ -69,6 +69,7 @@
             ],
             window: 0,
 
+            otherArtists: null,
             songDetails: null,
             artists: null,
             album: {

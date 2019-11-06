@@ -106,6 +106,9 @@
             musicEnded: function () {
                 this.currentSong.isPlaying = false;
             },
+            showAlbum: function (id){
+                handle.getDetailsAboutAnAlbum(this, id);
+            },
             currentProperties: function (comp) {
                 switch (comp.name) {
                     case "SongDetails":
@@ -127,7 +130,7 @@
                     case "SongDetails":
                         return {play: this.play};
                     case "Albums":
-                        return {};
+                        return {showAlbum: this.showAlbum};
                 }
             }
         }

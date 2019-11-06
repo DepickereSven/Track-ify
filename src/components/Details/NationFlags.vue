@@ -15,6 +15,7 @@
             <v-card>
 
                 <!-- TODO add nation flags by globe chart -->
+<!--                https://www.fusioncharts.com/fusionmaps/examples/population-growth-world-wide-->
 <!--                <div class="flags">-->
 <!--                    <template v-for="flag in flags">-->
 <!--                        <v-img height="120" width="160" :src="require('../../assets/images/flags/' + flag.toLowerCase() + '.svg')"></v-img>-->

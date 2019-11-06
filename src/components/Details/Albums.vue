@@ -13,7 +13,7 @@
         </v-slide-group>
 
         <v-expand-transition>
-            <v-sheet v-if="model != null" color="grey lighten-4" height="200" tile>
+            <v-sheet v-if="model != null" color="grey lighten-4" height="300" tile>
                 <v-row class="fill-height" align="center" justify="center">
                     <v-list-item>
                         <v-list-item-content>
@@ -21,7 +21,12 @@
                             <v-list-item-title class="title">{{allAlbumInfo.items[model].name}}</v-list-item-title>
                             <v-list-item-subtitle>Number of Songs: {{allAlbumInfo.items[model].total_tracks}}</v-list-item-subtitle>
                             <NationFlags :flags="allAlbumInfo.items[model].available_markets"></NationFlags>
-                            <v-btn class="" @click="showAlbum"></v-btn>
+
+                            <v-list-item-action class="see-album-details">
+                                <v-btn class="" x-large rounded @click="showAlbum">
+                                    See songs of the {{allAlbumInfo.items[model].name}} ~ {{allAlbumInfo.items[model].album_type}}
+                                </v-btn>
+                            </v-list-item-action>
                         </v-list-item-content>
 
                     </v-list-item>
@@ -39,7 +44,7 @@
     export default {
         name: "Albums",
         props: ["allAlbumInfo"],
-        created : function () {
+        created: function () {
 
         },
         components: {
@@ -58,12 +63,18 @@
 
 <style scoped>
 
-    #inspire .v-responsive{
+    #inspire .v-responsive {
         position: inherit;
     }
 
-    #inspire .mx-auto .fill-height{
+    #inspire .mx-auto .fill-height {
         text-align: center;
+    }
+
+    #inspire .see-album-details{
+        justify-content: center;
+        margin-left: 0px !important;
+        padding-top: 1%;
     }
 
 </style>

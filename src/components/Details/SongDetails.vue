@@ -65,7 +65,7 @@
             </div>
         </div>
     </v-card>
-    
+
 </template>
 
 <script>

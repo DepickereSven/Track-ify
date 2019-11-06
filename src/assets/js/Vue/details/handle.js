@@ -17,7 +17,7 @@ export default (function () {
         _self.artists = artistsData;
         _self.album = album;
         _self.allAlbumInfo = allAlbumInfo;
-        _self.otherArtistsDetails = otherArtistsDetails
+        _self.otherArtistsDetails = otherArtistsDetails.artists
         // getAlbums(_self);
     };
 

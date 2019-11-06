@@ -60,7 +60,7 @@
 
             <div class="column second">
                 <v-img :src="artists[0].images[0].url"></v-img>
-                <OtherArtists></OtherArtists>
+                <OtherArtists :other-artists="otherArtists"></OtherArtists>
             </div>
         </div>
     </v-card>
@@ -74,7 +74,7 @@
 
     export default {
         name: "SongDetails",
-        props: ["artists", "album", "songDetails"],
+        props: ["artists", "album", "songDetails", "otherArtists"],
         components: {
             Genres,
             ArtistsList,

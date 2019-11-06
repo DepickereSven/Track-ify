@@ -1,0 +1,37 @@
+{
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7m1YnY5oTXPJdUaRqRqgvD"
+        },
+        "followers": {
+          "href": null,
+          "total": 457
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/7m1YnY5oTXPJdUaRqRqgvD",
+        "id": "7m1YnY5oTXPJdUaRqRqgvD",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273795d76aed5600da5bf565d82",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02795d76aed5600da5bf565d82",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851795d76aed5600da5bf565d82",
+            "width": 64
+          }
+        ],
+        "name": "Yoonmirae",
+        "popularity": 38,
+        "type": "artist",
+        "uri": "spotify:artist:7m1YnY5oTXPJdUaRqRqgvD"
+      }
+    ]
+}

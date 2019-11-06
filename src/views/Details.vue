@@ -120,7 +120,7 @@
                             album: this.album,
                             // songDetails: this.$props.songDetails
                             songDetails: this.songDetails,
-                            otherArtists: this.otherArtists
+                            otherArtists: this.otherArtistsDetails
                         };
                     case "Albums":
                         return {

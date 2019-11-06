@@ -4,9 +4,16 @@
         <div class="overline">Associated with this album:</div>
         <v-list-item-group color="primary">
             <v-list-item v-for="(item, i) in otherArtists" :key="i">
-                <v-list-item-avatar tile>
+
+
+                <v-list-item-avatar tile v-if="item.images.length !== 0">
                     <v-img :src="item.images[item.images.length -1].url"></v-img>
                 </v-list-item-avatar>
+                <v-list-item-avatar tile v-else>
+
+                </v-list-item-avatar>
+
+
                 <v-list-item-content >
                     <v-list-item-title v-text="item.name"></v-list-item-title>
                     <v-list-item-subtitle>

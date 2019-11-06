@@ -1,7 +1,7 @@
 <template>
 
     <v-list rounded class="s-column" v-if="otherArtists.length !== 0">
-        <div class="overline">Other singers from the album</div>
+        <div class="overline">Associated with this album:</div>
         <v-list-item-group color="primary">
             <v-list-item v-for="(item, i) in otherArtists" :key="i">
                 <v-list-item-avatar tile>
@@ -11,7 +11,7 @@
                     <v-list-item-title v-text="item.name"></v-list-item-title>
                     <v-list-item-subtitle>
                         <font-awesome-icon :icon="['fas', 'heart']" size="xs"></font-awesome-icon>
-                        {{item.followers.total}}
+                        {{formatNumbers(item)}}
                     </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -23,7 +23,15 @@
 <script>
     export default {
         name: "OtherArtists",
-        props: ["otherArtists"]
+        props: ["otherArtists"],
+        methods: {
+            formatNumbers: function (arg) {
+                return arg.followers.total.toLocaleString(
+                    undefined,
+                    {minimumFractionDigits: 0}
+                );
+            },
+        }
     }
 </script>
 

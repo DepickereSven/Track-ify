@@ -4,21 +4,10 @@
 
 import spotify from "../../spotify"
 import utils from "../utils"
-import songData from "../../../images/detailsSongDetails"
-import artistsData from "../../../images/detailArtists"
-import album from "../../../images/detailsAlbum"
-import allAlbumInfo from "../../../images/detailsAllAlbum"
-import otherArtistsDetails from "../../../images/otherArtistsDetails"
-import spotifyData from "../home/spotifyData";
 
 export default (function () {
 
     const init = function (_self) {
-        // _self.songDetails = songData;
-        // _self.artists = artistsData;
-        // _self.album = album;
-        // _self.allAlbumInfo = allAlbumInfo;
-        // _self.otherArtistsDetails = otherArtistsDetails.artists
         getAlbums(_self);
     };
 

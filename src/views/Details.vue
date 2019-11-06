@@ -71,8 +71,6 @@
 
             otherArtists: [],
             otherArtistsDetails: [],
-            // songDetails: null,
-            // artists: null,
             album: {
                 tracks: {},
                 images: [{
@@ -119,10 +117,8 @@
                     case "SongDetails":
                         return {
                             artists: this.$props.artists,
-                            // artists: this.artists,
                             album: this.album,
                             songDetails: this.$props.songDetails,
-                            // songDetails: this.songDetails,
                             otherArtists: this.otherArtistsDetails
                         };
                     case "Albums":

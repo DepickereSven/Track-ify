@@ -4,16 +4,10 @@
 
 import spotify from "../../spotify"
 import spotifyData from "./spotifyData"
-import songData from "../../../images/test"
-import artists from "../../../images/artists"
 
 export default (function () {
 
     const init = function (_self) {
-        // _self.data = songData;
-        // _self.artists = artists.artists;
-        // spotifyData.getGenresAndPrepareCharData(_self);
-        // _self.loaded = true;
         spotify.configuration.spotifyApi.getMyTopTracks({
             limit: 50,
             time_range: "short_term"

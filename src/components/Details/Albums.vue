@@ -28,9 +28,7 @@
                                 </v-btn>
                             </v-list-item-action>
                         </v-list-item-content>
-
                     </v-list-item>
-
                 </v-row>
             </v-sheet>
         </v-expand-transition>
@@ -71,7 +69,7 @@
         text-align: center;
     }
 
-    #inspire .see-album-details{
+    #inspire .see-album-details {
         justify-content: center;
         margin-left: 0px !important;
         padding-top: 1%;

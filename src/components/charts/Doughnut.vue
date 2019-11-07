@@ -1,6 +1,6 @@
 <script>
 
-    import { Doughnut } from 'vue-chartjs'
+    import {Doughnut} from 'vue-chartjs'
 
     export default {
         name: "Doughnut",
@@ -15,7 +15,7 @@
                 default: null
             }
         },
-        mounted () {
+        mounted() {
             this.renderChart(this.chartdata, this.options)
         }
     }

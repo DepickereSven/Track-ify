@@ -1,5 +1,4 @@
 <template>
-
     <v-card class="card-v">
         <div class="s-row">
             <div class="column first">
@@ -36,7 +35,7 @@
                 </v-list-item>
 
                 <v-list rounded>
-                    <v-list-item-group color="primary" >
+                    <v-list-item-group color="primary">
                         <v-list-item v-for="(song, i) in album.tracks.items" :key="i" @click="play(song)">
 
                             <v-list-item-avatar tile>
@@ -65,7 +64,6 @@
             </div>
         </div>
     </v-card>
-
 </template>
 
 <script>

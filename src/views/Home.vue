@@ -122,5 +122,4 @@
         max-width: 50%;
     }
 
-
 </style>

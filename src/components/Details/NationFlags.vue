@@ -15,12 +15,12 @@
             <v-card>
 
                 <!-- TODO add nation flags by globe chart -->
-<!--                https://www.fusioncharts.com/fusionmaps/examples/population-growth-world-wide-->
-<!--                <div class="flags">-->
-<!--                    <template v-for="flag in flags">-->
-<!--                        <v-img height="120" width="160" :src="require('../../assets/images/flags/' + flag.toLowerCase() + '.svg')"></v-img>-->
-<!--                    </template>-->
-<!--                </div>-->
+                <!--                https://www.fusioncharts.com/fusionmaps/examples/population-growth-world-wide-->
+                <!--                <div class="flags">-->
+                <!--                    <template v-for="flag in flags">-->
+                <!--                        <v-img height="120" width="160" :src="require('../../assets/images/flags/' + flag.toLowerCase() + '.svg')"></v-img>-->
+                <!--                    </template>-->
+                <!--                </div>-->
                 <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn color="green darken-1" text @click="dialog = false">Close</v-btn>
@@ -50,7 +50,7 @@
 
 <style scoped>
 
-    #inspire .flags{
+    #inspire .flags {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

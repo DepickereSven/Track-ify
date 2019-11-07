@@ -1,7 +1,7 @@
 <template>
     <v-sheet class="mx-auto" elevation="8">
         <v-slide-group v-model="model" class="pa-4" show-arrows>
-            <v-slide-item v-for="(albums, n) in allAlbumInfo.items" :key="n" v-slot:default="{ active, toggle }">
+            <v-slide-item v-for="(albums, n) in allAlbumInfo" :key="n" v-slot:default="{ active, toggle }">
                 <v-card class="ma-4" height="200" width="200" @click="toggle">
                     <v-row class="fill-height" align="center" justify="center">
                         <v-scale-transition>
@@ -17,14 +17,14 @@
                 <v-row class="fill-height" align="center" justify="center">
                     <v-list-item>
                         <v-list-item-content>
-                            <div class="overline">{{allAlbumInfo.items[model].album_type}} - {{allAlbumInfo.items[model].release_date}}</div>
-                            <v-list-item-title class="title">{{allAlbumInfo.items[model].name}}</v-list-item-title>
-                            <v-list-item-subtitle>Number of Songs: {{allAlbumInfo.items[model].total_tracks}}</v-list-item-subtitle>
-                            <NationFlags :flags="allAlbumInfo.items[model].available_markets"></NationFlags>
+                            <div class="overline">{{allAlbumInfo[model].album_type}} - {{allAlbumInfo[model].release_date}}</div>
+                            <v-list-item-title class="title">{{allAlbumInfo[model].name}}</v-list-item-title>
+                            <v-list-item-subtitle>Number of Songs: {{allAlbumInfo[model].total_tracks}}</v-list-item-subtitle>
+                            <NationFlags :flags="allAlbumInfo[model].available_markets"></NationFlags>
 
                             <v-list-item-action class="see-album-details">
                                 <v-btn class="" x-large rounded @click="showAlbum">
-                                    See songs of {{allAlbumInfo.items[model].name}} ~ {{allAlbumInfo.items[model].album_type}}
+                                    See songs of {{allAlbumInfo[model].name}} ~ {{allAlbumInfo[model].album_type}}
                                 </v-btn>
                             </v-list-item-action>
                         </v-list-item-content>
@@ -43,7 +43,7 @@
         name: "Albums",
         props: ["allAlbumInfo"],
         created: function () {
-
+            console.log(this.$props.allAlbumInfo);
         },
         components: {
             NationFlags
@@ -53,7 +53,7 @@
         }),
         methods: {
             showAlbum: function () {
-                this.$emit("showAlbum", this.$props.allAlbumInfo.items[this.model].id)
+                this.$emit("showAlbum", this.$props.allAlbumInfo[this.model].id)
             }
         }
     }

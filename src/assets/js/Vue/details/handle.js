@@ -23,7 +23,7 @@ export default (function () {
                 limit: 50
             });
         }).then(function (allAlbumInfo) {
-            _self.allAlbumInfo = allAlbumInfo;
+            _self.allAlbumInfo = orderAllAlbumInfoOnData(allAlbumInfo);
         }).catch(function (error) {
             console.error(error);
         });
@@ -92,6 +92,12 @@ export default (function () {
 
     function resetVars(_self) {
         _self.otherArtists = [];
+    }
+
+    function orderAllAlbumInfoOnData(allAlbumInfo) {
+        return allAlbumInfo.items.sort(function(a,b){
+            return new Date(b.release_date) - new Date(a.release_date);
+        });
     }
 
     return {

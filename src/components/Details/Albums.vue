@@ -23,7 +23,7 @@
                             <NationFlags :flags="allAlbumInfo[model].available_markets"></NationFlags>
 
                             <v-list-item-action class="see-album-details">
-                                <v-btn class="" x-large rounded @click="showAlbum">
+                                <v-btn :class="styleButton" x-large rounded @click="showAlbum">
                                     See songs of {{allAlbumInfo[model].name}} ~ {{allAlbumInfo[model].album_type}}
                                 </v-btn>
                             </v-list-item-action>
@@ -43,7 +43,7 @@
         name: "Albums",
         props: ["allAlbumInfo"],
         created: function () {
-            console.log(this.$props.allAlbumInfo);
+
         },
         components: {
             NationFlags
@@ -54,6 +54,15 @@
         methods: {
             showAlbum: function () {
                 this.$emit("showAlbum", this.$props.allAlbumInfo[this.model].id)
+            }
+        },
+        computed: {
+            styleButton: function () {
+                if (this.$props.allAlbumInfo[this.model].name.length > 40){
+                    return "small-text";
+                } else {
+                    return "";
+                }
             }
         }
     }
@@ -73,6 +82,10 @@
         justify-content: center;
         margin-left: 0px !important;
         padding-top: 1%;
+    }
+
+    #inspire .small-text{
+        font-size: 0.7rem;
     }
 
 </style>

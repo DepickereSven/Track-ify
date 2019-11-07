@@ -10,7 +10,7 @@
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 </v-expansion-panels>
-                <v-list-item-group color="primary">
+                <v-list-item-group color="primary" class="main-list">
                     <v-list-item v-for="(item, i) in data" :key="i">
                         <v-list-item-avatar tile @click="details(item)">
                             <img :src="item.album.images[item.album.images.length -1].url" :alt="item.album.images[item.album.images.length -1].value"/>
@@ -120,6 +120,10 @@
 
     #inspire .list {
         max-width: 50%;
+    }
+
+    #inspire .main-list{
+        margin-top: 4%;
     }
 
 </style>

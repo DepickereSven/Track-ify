@@ -19,7 +19,6 @@
                 </v-item-group>
 
                 <v-col>
-
                     <v-window v-model="window" reverse>
 
                         <v-window-item v-for="(comp, n) in itemComponents" :key="n">
@@ -109,7 +108,7 @@
             musicEnded: function () {
                 this.currentSong.isPlaying = false;
             },
-            showAlbum: function (id){
+            showAlbum: function (id) {
                 handle.getDetailsAboutAnAlbum(this, id);
             },
             currentProperties: function (comp) {
@@ -145,7 +144,8 @@
     .detailsWidth {
         width: 70%;
     }
-    .detailsWidth.s-row{
+
+    .detailsWidth.s-row {
         align-items: center;
     }
 

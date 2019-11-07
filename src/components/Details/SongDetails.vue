@@ -49,7 +49,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
 
-                            <v-list-item-action>
+                            <v-list-item-action v-if="song.preview_url !== null">
                                 <font-awesome-icon :icon="['fas', 'play']" size="lg" pull="right"></font-awesome-icon>
                             </v-list-item-action>
 

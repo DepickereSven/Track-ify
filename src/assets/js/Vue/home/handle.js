@@ -7,10 +7,10 @@ import spotifyData from "./spotifyData"
 
 export default (function () {
 
-    const init = function (_self) {
+    const init = function (_self, arg = "short_term") {
         spotify.configuration.spotifyApi.getMyTopTracks({
             limit: 50,
-            time_range: "short_term"
+            time_range: arg
         }).then(function(data) {
             _self.data = data.items;
         }).then(function() {

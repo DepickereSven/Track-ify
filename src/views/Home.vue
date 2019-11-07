@@ -1,7 +1,13 @@
 <template>
     <v-container fluid fill-height>
         <v-layout align-center justify-center column>
+
             <v-list rounded class="list">
+
+                    <v-tabs v-model="tabModel">
+                        <v-tab v-for="item in period" @click="refreshDetails(item)">{{item.name}}</v-tab>
+                    </v-tabs>
+
                 <v-expansion-panels>
                     <v-expansion-panel>
                         <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
@@ -10,6 +16,7 @@
                         </v-expansion-panel-content>
                     </v-expansion-panel>
                 </v-expansion-panels>
+
                 <v-list-item-group color="primary" class="main-list">
                     <v-list-item v-for="(item, i) in data" :key="i">
                         <v-list-item-avatar tile @click="details(item)">
@@ -53,6 +60,22 @@
             MusicPlayer
         },
         data: () => ({
+            tabModel: 2,
+            period: [
+                {
+                    name: 'All Time',
+                    time_range: "long_term"
+                },
+                {
+                    name: 'Last 6 months',
+                    time_range: "medium_term"
+                },
+                {
+                    name: 'Last 4 weeks',
+                    time_range: "short_term"
+                }
+            ],
+
             data: [],
             artists: [],
             genres: [],
@@ -77,6 +100,9 @@
         methods: {
             details: function (arg) {
                 handle.navigateToDetails(this, arg);
+            },
+            refreshDetails: function (arg){
+                handle.init(this, arg.time_range);
             },
             play: function (arg) {
                 if (this.currentSong.isPlaying) {

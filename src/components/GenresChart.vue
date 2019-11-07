@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <doughnut-chart v-if="loaded" :chartdata="chartData" :options="options"></doughnut-chart>
+        <doughnut-chart v-if="loaded" :chart-data="chartData" :options="options"></doughnut-chart>
     </div>
 </template>
 

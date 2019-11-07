@@ -20,10 +20,10 @@ export default (function () {
     function createNumberOfGenres(_self, genres) {
         let genreArray = [];
         genres.forEach(function (el, topIndex) {
-            if (el.length !== 0){
+            if (el.length !== 0) {
                 el.forEach(function (element) {
                     let index = genreArray.findIndex((genre => genre.name === element));
-                    if (index === undefined || index === -1){
+                    if (index === undefined || index === -1) {
                         genreArray.push({
                             name: element,
                             hits: 1,
@@ -39,13 +39,25 @@ export default (function () {
     }
 
     function getChartData(_self) {
+        resetGenresChart(_self);
         let index = 0;
-        while (index < 10){
+        while (index < 10) {
             _self.genresChart.labels.push(_self.genres[index].name);
             _self.genresChart.datasets[0].backgroundColor.push(utils.getRandomColor());
             _self.genresChart.datasets[0].data.push(_self.genres[index].hits);
             index++;
         }
+    }
+
+    function resetGenresChart(_self) {
+        _self.genresChart = {
+            labels: [],
+            datasets: [{
+                backgroundColor: [],
+                borderWidth: 0,
+                data: []
+            }]
+        };
     }
 
     return {

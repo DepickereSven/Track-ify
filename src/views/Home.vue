@@ -8,7 +8,7 @@
                         <v-tab v-for="item in period" @click="refreshDetails(item)">{{item.name}}</v-tab>
                     </v-tabs>
 
-                <v-expansion-panels>
+                <v-expansion-panels class="main-list">
                     <v-expansion-panel>
                         <v-expansion-panel-header @click="redrawChart">Top 10 Genres</v-expansion-panel-header>
                         <v-expansion-panel-content v-if="chartDraw">

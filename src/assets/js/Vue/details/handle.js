@@ -52,6 +52,8 @@ export default (function () {
         if (_self.otherArtists.length !== 0){
             _self.otherArtists = utils.makeUnique(_self.otherArtists, "id");
             getArtistsDetails(_self);
+        } else {
+            _self.otherArtistsDetails = [];
         }
     }
 

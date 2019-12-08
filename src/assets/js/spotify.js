@@ -10,7 +10,7 @@ export default (function () {
         authEndpoint: "https://accounts.spotify.com/authorize",
         clientId: "a99753b000db451b9a40b2420e8cdfcb",
         redirectUri: "https://track-ify.com/confirm",
-        // redirectUri: "http://localhost:8081/confirm",
+        redirectUri: "http://localhost:8081/confirm",
         scopes: [
             "user-top-read",
             // "user-read-email",

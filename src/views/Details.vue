@@ -3,7 +3,7 @@
         <v-layout align-center justify-center class="s-column">
 
             <div class="detailsWidth s-row">
-                <v-item-group v-model="window" class="shrink mr-6" mandatory tag="v-flex">
+                <v-item-group v-model="window" class="shrink mr-6 dots" mandatory tag="v-flex">
                     <v-item v-for="(comp, n) in itemComponents" :key="n" v-slot:default="{ active, toggle }">
                         <div>
                             <v-tooltip bottom>
@@ -143,10 +143,29 @@
 
     .detailsWidth {
         width: 70%;
+        min-width: 750px;
     }
 
     .detailsWidth.s-row {
         align-items: center;
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        #inspire .s-row{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #inspire .s-row .dots{
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        #inspire .detailsWidth{
+            width: 100%;
+        }
+
     }
 
 </style>

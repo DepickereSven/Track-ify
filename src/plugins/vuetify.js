@@ -9,4 +9,13 @@ export default new Vuetify({
         iconfont: 'faSvg',
         values: CUSTOM_ICONS
     },
+    breakpoint: {
+        thresholds: {
+            xs: 340,
+            sm: 800,
+            md: 800,
+            lg: 1280,
+        },
+        scrollBarWidth: 24,
+    },
 });

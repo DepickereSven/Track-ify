@@ -56,11 +56,12 @@
                         </v-list-item>
                     </v-list-item-group>
                 </v-list>
+                <OtherArtists v-if="needToShowSmallBreakpoints" :other-artists="otherArtists"></OtherArtists>
             </div>
 
             <div class="column second">
                 <v-img :src="artists[0].images[0].url"></v-img>
-                <OtherArtists :other-artists="otherArtists"></OtherArtists>
+                <OtherArtists v-if="!needToShowSmallBreakpoints" :other-artists="otherArtists"></OtherArtists>
             </div>
         </div>
     </v-card>
@@ -94,6 +95,17 @@
                     {minimumFractionDigits: 0}
                 );
             },
+            needToShowSmallBreakpoints() {
+                switch (this.$vuetify.breakpoint.name) {
+                    case 'xs':
+                    case 'sm':
+                        return true;
+                    case 'md':
+                    case 'lg':
+                    case 'xl':
+                        return false;
+                }
+            }
         }
     }
 
@@ -126,6 +138,43 @@
     .card-v .s-row .column.first .s-row.album-details {
         padding-top: 5%;
         padding-left: 16px;
+    }
+
+    @media only screen and (max-width: 800px){
+
+        #inspire .detailsWidth .s-row{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        #inspire .card-v .s-row .column.second,
+        .card-v .s-row .column.first{
+            padding-right: 0;
+            padding-left: 0;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #inspire .card-v .s-row .column.second{
+            width: 100%;
+            margin-bottom: 35px;
+            margin-top: 35px;
+        }
+
+        #inspire .card-v .s-row .column.second .v-image{
+            width: 60%;
+            align-self: center;
+        }
+
+        #inspire .card-v .s-row .column.first{
+            width: 50%;
+        }
+
+        #inspire .card-v .s-row .column.first #spanText{
+            display: flex;
+            flex-direction: row;
+        }
     }
 
 </style>

@@ -20,4 +20,11 @@
 
 #inspire .mouse-pointer{
     cursor: pointer;
-}  
+}
+
+#inspire .v-slide-group__prev{
+    display: unset;
+    visibility: unset;
+    flex: 0 0 auto !important;
+    min-width: 0;
+}

@@ -5,7 +5,7 @@
             <v-list rounded class="list">
 
                     <v-tabs v-model="tabModel">
-                        <v-tab v-for="item in period" @click="refreshDetails(item)">{{item.name}}</v-tab>
+                        <v-tab v-for="(item, i) in period" :key="i" @click="refreshDetails(item)">{{item.name}}</v-tab>
                     </v-tabs>
 
                 <v-expansion-panels class="main-list">
@@ -28,7 +28,7 @@
                                 <ArtistsList class="artists" :artists="item.artists"></ArtistsList>
                             </v-list-item-subtitle>
                         </v-list-item-content>
-                        <v-list-item-action @click="play(item)">
+                        <v-list-item-action @click="play(item)" v-if="item.preview_url">
                             <font-awesome-icon :icon="['fas', 'play']" size="lg" pull="right"></font-awesome-icon>
                         </v-list-item-action>
                     </v-list-item>
@@ -105,11 +105,13 @@
                 handle.init(this, arg.time_range);
             },
             play: function (arg) {
-                if (this.currentSong.isPlaying) {
-                    this.stopMusic();
-                    this.startMusic(arg);
-                } else {
-                    this.startMusic(arg);
+                if (arg.preview_url !== null){
+                    if (this.currentSong.isPlaying) {
+                        this.stopMusic();
+                        this.startMusic(arg);
+                    } else {
+                        this.startMusic(arg);
+                    }
                 }
             },
             startMusic: function (arg) {
@@ -117,6 +119,7 @@
                 this.currentSong.current = arg.preview_url;
                 this.currentSong.title = arg.name;
                 this.currentSong.artists = arg.artists;
+                console.log((this.currentSong.current));
             },
             stopMusic: function () {
                 this.$refs.audio.pause();
@@ -146,6 +149,7 @@
 
     #inspire .list {
         max-width: 50%;
+        min-width: 380px;
     }
 
     #inspire .main-list{

@@ -13,6 +13,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faPlay);
 library.add(faStop);
@@ -25,6 +26,7 @@ library.add(faChevronLeft);
 library.add(faChevronRight);
 
 library.add(faSpotify);
+library.add(faGithub);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
@@ -69,6 +71,12 @@ const CUSTOM_ICONS = {
         component: FontAwesomeIcon,
         props: {
             icon: ['fab', 'spotify']
+        }
+    },
+    github: {
+        component: FontAwesomeIcon,
+        props: {
+            icon: ['fab', 'github']
         }
     },
     expand: {

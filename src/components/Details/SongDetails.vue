@@ -82,7 +82,9 @@
         },
         methods: {
             play: function (arg) {
-                this.$emit("play", arg);
+                if (arg.preview_url !== null) {
+                    this.$emit("play", arg);
+                }
             }
         },
         computed: {

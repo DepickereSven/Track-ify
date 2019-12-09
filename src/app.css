@@ -22,9 +22,21 @@
     cursor: pointer;
 }
 
-#inspire .v-slide-group__prev{
+#inspire .list .main-list .v-slide-group__prev{
     display: unset;
     visibility: unset;
     flex: 0 0 auto !important;
     min-width: 0;
+}
+
+@media only screen and (max-width: 800px) {
+
+    #inspire .text-button .v-btn__content,
+    #inspire .small-text .v-btn__content{
+        display: unset;
+        flex: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
 }

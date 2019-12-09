@@ -175,6 +175,18 @@
             display: flex;
             flex-direction: row;
         }
+
+        #inspire .card-v .s-row .column.first .display-2 #spanText{
+            font-size: 30px;
+        }
+
+        #inspire .card-v .s-row .column.first .display-2 #spanText .ma-2{
+            font-size: 14px;
+        }
+
+        #inspire .card-v .s-row .column.first .display-2 #spanText .ma-2 .fa-heart{
+            font-size: 18px;
+        }
     }
 
 </style>

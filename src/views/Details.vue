@@ -166,6 +166,11 @@
             width: 100%;
         }
 
+        .detailsWidth{
+            width: auto;
+            min-width: 100%;
+        }
+
     }
 
 </style>

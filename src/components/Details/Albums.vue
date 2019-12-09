@@ -14,7 +14,7 @@
 
         <v-expand-transition>
             <v-sheet v-if="model != null" color="grey lighten-4" height="300" tile>
-                <v-row class="fill-height" align="center" justify="center">
+                <div class="fill-height" align="center" justify="center">
                     <v-list-item>
                         <v-list-item-content>
                             <div class="overline">{{allAlbumInfo[model].album_type}} - {{allAlbumInfo[model].release_date}}</div>
@@ -29,7 +29,7 @@
                             </v-list-item-action>
                         </v-list-item-content>
                     </v-list-item>
-                </v-row>
+                </div>
             </v-sheet>
         </v-expand-transition>
     </v-sheet>
@@ -61,7 +61,7 @@
                 if (this.$props.allAlbumInfo[this.model].name.length > 40){
                     return "small-text";
                 } else {
-                    return "";
+                    return "text-button";
                 }
             }
         }
@@ -86,6 +86,32 @@
 
     #inspire .small-text{
         font-size: 0.7rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+
+        #inspire .v-application--wrap .container .layout .mx-auto{
+            width: 50%;
+        }
+
+        #inspire .small-text,
+        #inspire .text-button{
+            height: 30px;
+            padding: 0 7px;
+        }
+
+        #inspire .small-text{
+            font-size: 1.5vh;
+        }
+
+        #inspire .text-button{
+            font-size: 1.5vh;
+        }
+
+        #inspire .v-list-item__content .title{
+            font-size: 3vh !important;
+        }
+
     }
 
 </style>

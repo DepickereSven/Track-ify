@@ -2,7 +2,7 @@
     <v-sheet class="mx-auto" elevation="8">
         <v-slide-group v-model="model" class="pa-4" show-arrows>
             <v-slide-item v-for="(albums, n) in allAlbumInfo" :key="n" v-slot:default="{ active, toggle }">
-                <v-card class="ma-4" height="200" width="200" @click="toggle">
+                <v-card class="ma-4 image-res" @click="toggle">
                     <v-row class="fill-height" align="center" justify="center">
                         <v-scale-transition>
                             <v-img :src="albums.images[0].url" contain></v-img>
@@ -88,10 +88,15 @@
         font-size: 0.7rem;
     }
 
+    #inspire .image-res{
+        height: 200px;
+        width: 200px;
+    }
+
     @media only screen and (max-width: 800px) {
 
         #inspire .v-application--wrap .container .layout .mx-auto{
-            width: 50%;
+            width: 100%;
         }
 
         #inspire .small-text,
@@ -110,6 +115,11 @@
 
         #inspire .v-list-item__content .title{
             font-size: 3vh !important;
+        }
+
+        #inspire .image-res{
+            height: 160px;
+            width: 160px;
         }
 
     }

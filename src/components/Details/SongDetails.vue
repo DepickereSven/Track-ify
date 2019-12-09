@@ -20,7 +20,7 @@
 
                 <v-list-item class="album-details">
 
-                    <v-list-item-avatar tile></v-list-item-avatar>
+                    <v-list-item-avatar tile class="empty-avatar"></v-list-item-avatar>
 
                     <v-list-item-content>
                         <div class="overline">{{album.album_type}} - {{album.release_date}}</div>
@@ -142,6 +142,10 @@
 
     @media only screen and (max-width: 800px){
 
+        #inspire .album-details .empty-avatar{
+            display: none;
+        }
+
         #inspire .detailsWidth .s-row{
             display: flex;
             flex-direction: column-reverse;
@@ -168,7 +172,7 @@
         }
 
         #inspire .card-v .s-row .column.first{
-            width: 50%;
+            width: 100%;
         }
 
         #inspire .card-v .s-row .column.first #spanText{
@@ -177,15 +181,15 @@
         }
 
         #inspire .card-v .s-row .column.first .display-2 #spanText{
-            font-size: 30px;
+            font-size: 25px;
         }
 
         #inspire .card-v .s-row .column.first .display-2 #spanText .ma-2{
-            font-size: 14px;
+            font-size: 13px;
         }
 
         #inspire .card-v .s-row .column.first .display-2 #spanText .ma-2 .fa-heart{
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 

@@ -12,7 +12,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^2.0.8",
-    "chart.js": "^3.8.0",
+    "chart.js": "^3.8.2",
     "core-js": "^3.23.4",
     "spotify-web-api-js": "^1.5.2",
     "vue": "^2.7.6",

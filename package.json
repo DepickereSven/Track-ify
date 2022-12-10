@@ -11,7 +11,13 @@
     "roboto-fontface": "*",
     "vue": "^3.2.38",
     "vuetify": "^3.0.0",
-    "webfontloader": "^1.0.0"
+    "webfontloader": "^1.0.0",
+    "spotify-web-api-js": "^1.5.2",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^2.0.9",
+    "chart.js": "^3.9.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

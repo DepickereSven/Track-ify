@@ -30,7 +30,7 @@
     "@vue/test-utils": "2.4.4",
     "sass": "^1.69.5",
     "sass-loader": "^14.1.0",
-    "vue-template-compiler": "^2.7.14",
+    "vue-template-compiler": "^2.7.16",
     "vue-cli-plugin-vuetify": "^2.5.8",
     "vuetify-loader": "^1.9.2"
   },

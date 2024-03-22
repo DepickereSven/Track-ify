@@ -27,7 +27,7 @@
     "@vue/cli-plugin-unit-jest": "^5.0.8",
     "@vue/cli-plugin-vuex": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "@vue/test-utils": "2.4.1",
+    "@vue/test-utils": "2.4.4",
     "sass": "^1.69.5",
     "sass-loader": "^14.1.0",
     "vue-template-compiler": "^2.7.14",

@@ -11,7 +11,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "chart.js": "^4.4.2",
     "core-js": "^3.36.1",
     "spotify-web-api-js": "^1.5.2",

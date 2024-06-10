@@ -17,7 +17,7 @@
     "spotify-web-api-js": "^1.5.2",
     "vue": "^3.4.21",
     "vue-chartjs": "^5.3.0",
-    "vue-router": "^4.3.0",
+    "vue-router": "^4.3.3",
     "vuetify": "^3.5.11",
     "vuex": "^4.1.0"
   },
